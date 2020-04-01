@@ -1,0 +1,38 @@
+@import '../../assets/styles/colors.scss';
+
+.btn-primary {
+  border: none;
+  border-radius: 5px;
+  background: $red2;
+  padding: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transition: .5s;
+
+  a {
+    color: $light-gray;
+  }
+
+  &:hover {
+    background: $red;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.btn-filter {
+  border: 1px solid $gray;
+  border-radius: 5px;
+  color: $dark-gray;
+  font-size: 14px;
+  background: $light-gray2;
+  padding: 2px 7px 2px 7px;
+  margin: 3px 6px 3px 0px;
+  min-width: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s;
+
+  &--checked {
+    border: 1px solid $red2;
+    color: $red2;
+  }
+}

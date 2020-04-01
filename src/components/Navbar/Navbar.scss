@@ -1,0 +1,96 @@
+@import '../../assets/styles/colors.scss';
+
+.navbar-container {
+  width: 100%;
+  background-color: $light-orange3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  font-family: 'Baloo Chettan 2', cursive;
+  font-size: 20px;
+}
+
+nav.navbar-light {
+  background-color: $light-orange3;
+  max-width: 1333px;
+  margin: 0 auto;
+  white-space: nowrap;
+
+  .navbar-toggler {
+    border: none;
+    padding-bottom: 8px;
+    padding-right: 0px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(66, 63, 56, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  }
+
+  .dropdown-item {
+    cursor: pointer;
+  }
+}
+
+.navbar-underline {
+  height: 2px;
+  width: 100%;
+  background: $red2;
+}
+
+.logo-text {
+  font-size: 26px;
+  margin: 0px 0px 3px 10px;
+}
+
+.dark-gray {
+  color: $dark-gray2;
+}
+
+.red {
+  color: $red2;
+}
+
+.links {
+  padding-right: 16px;
+}
+
+.btn {
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  font-size: 20px;
+  padding: 0px 10px 10px 10px;
+  height: 32px;
+  width: 40px;
+  color: $dark-orange;
+  background-color: $light-gray;
+}
+
+.login-button-mobile {
+  padding-bottom: 6px;
+  padding-right: 8px;
+}
+
+.user-button-mobile {
+  padding-bottom: 6px;
+}
+
+.desktop-links {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-right: 200px;
+}
+
+@media (min-width: "991px") {
+
+  .nav-link {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+

@@ -1,0 +1,47 @@
+@import '../../assets/styles/colors.scss';
+
+.index-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 0px 15px 0px 15px;
+  text-align: center;
+  background: $light-orange;
+
+  .content {
+    width: 100%;
+    max-width: 1333px;
+    text-align: right;
+    padding-right: 50px;
+  }
+  .p1 {
+    font-size: 40px;
+    color: $dark-gray2;
+  }
+
+  .p2 {
+    font-size: 28px;
+    color: $dark-gray;
+    margin-bottom: 30px;
+  }
+
+  @media(max-width: 991px) {
+
+    .content {
+      text-align: center;
+      padding-right: 0px;
+    }
+
+    .p1 {
+      font-size: 26px;
+    }
+  
+    .p2 {
+      font-size: 20px;
+    }
+  }
+}

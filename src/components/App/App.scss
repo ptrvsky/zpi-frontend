@@ -1,0 +1,30 @@
+@import '../../assets/styles/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Baloo Chettan 2', cursive;
+  font-size: 18px;
+  color: $dark-gray2;
+}
+
+a {
+  color: $dark-gray2;
+  transition:.5s;
+
+  &:hover {
+    color: $red2;
+    text-decoration: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  background-color: $light-orange;
+}
+
+.App {
+  width: 100%;
+}
