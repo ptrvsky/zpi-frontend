@@ -1,0 +1,49 @@
+@import "../../assets/styles/colors.scss";
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "title title photo photo" "text text photo photo" "text text photo photo";
+  padding-left: 200px;
+}
+
+.photo {
+  grid-area: photo;
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  .three {
+    padding: 60px 10px 10px 10px;
+  }
+}
+
+.title {
+  font-size: 50px;
+  padding-top: 150px;
+}
+
+.text {
+  grid-area: text;
+  padding-top: 40px;
+  padding-right: 50px;
+  opacity: 0.9;
+  text-align: justify;
+}
+
+@media (max-width: 991px) {
+  .photo {
+    .three {
+      display: none;
+    }
+  }
+  .title {
+    text-align: center;
+    font-size: 25px;
+  }
+  .text {
+    text-align: left;
+    font-size: 15px;
+  }
+}

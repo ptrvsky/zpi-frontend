@@ -1,0 +1,29 @@
+.contact-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  min-height: 100%;
+  padding: 0px 15px 0px 15px;
+  padding-left: 200px;
+  font-size: 30px;
+ 
+  .contact-title {
+    font-size: 50px;
+    padding-top: 150px;
+  }
+
+  .contact-pizza-name {
+    padding-top: 80px;
+    font-size: 40px;
+    
+  }
+  .contact-address {
+    padding-top: 50px;
+  }
+  .contact-contact {
+    padding-top: 50px;
+  }
+}
+
+
