@@ -9,7 +9,7 @@ export default class About extends React.Component {
             <div className="about-wrapper">
                 <div className="grid-container">
                     <div className="photo">
-                    <img className="three" src="images/aboutThree.jpg" alt="" />
+                    <img className="three" src="/zpi-frontend/images/aboutThree.jpg" alt="" />
                     </div>
                     <div className="title">O nas</div>
                     <div className="text">

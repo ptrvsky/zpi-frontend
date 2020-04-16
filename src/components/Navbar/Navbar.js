@@ -31,7 +31,7 @@ class NavigationBar extends React.Component {
       <div className="Navbar">
         <div className="navbar-container">
           <Navbar variant="light" expand="lg">
-            <Link to="/">
+            <Link to="/zpi-frontend/">
               <Navbar.Brand>
                 <div className="logo-text d-inline-block align-top"><span className="dark-gray"><span role="img" aria-label="logo">🍕</span> Pizzeria</span><span className="red"> Online</span></div>
               </Navbar.Brand>
@@ -40,36 +40,36 @@ class NavigationBar extends React.Component {
             <Mobile>
             {this.state.user.status === 'LOGGED' ?
                 <NavDropdown alignRight title={<User />} className="user-button-mobile ml-auto">
-                  <Link to="/oreders" className="dropdown-item">Zamowienia</Link>
-                  <Link to="/cart" className="dropdown-item">Koszyk</Link>
-                  <Link to="/account" className="dropdown-item">Dane konta</Link>
+                  <Link to="/zpi-frontend/oreders" className="dropdown-item">Zamowienia</Link>
+                  <Link to="/zpi-frontend/cart" className="dropdown-item">Koszyk</Link>
+                  <Link to="/zpi-frontend/account" className="dropdown-item">Dane konta</Link>
                   <NavDropdown.Divider />
                   <div className="dropdown-item" onClick={this.handleLogout}>Wyloguj</div>
                 </NavDropdown>
-                : <Link to="/login" className="login-button-mobile ml-auto" >{<LogIn />}</Link>}
+                : <Link to="/zpi-frontend/login" className="login-button-mobile ml-auto" >{<LogIn />}</Link>}
               <Navbar.Toggle />
               <Navbar.Collapse className="links">
-                <Link to="/menu" className="nav-link">Menu</Link>
-                <Link to="/about" className="nav-link">O nas</Link>
-                <Link to="/contact" className="nav-link">Kontakt</Link>
+                <Link to="/zpi-frontend/menu" className="nav-link">Menu</Link>
+                <Link to="/zpi-frontend/about" className="nav-link">O nas</Link>
+                <Link to="/zpi-frontend/contact" className="nav-link">Kontakt</Link>
               </Navbar.Collapse>
             </Mobile>
 
             <Desktop>
               <div className="desktop-links">
-                <Link to="/menu" className="nav-link">Menu</Link>
-                <Link to="/about" className="nav-link">O nas</Link>
-                <Link to="/contact" className="nav-link">Kontakt</Link>
+                <Link to="/zpi-frontend/menu" className="nav-link">Menu</Link>
+                <Link to="/zpi-frontend/about" className="nav-link">O nas</Link>
+                <Link to="/zpi-frontend/contact" className="nav-link">Kontakt</Link>
                 </div>
               {this.state.user.status === 'LOGGED' ?
                 <NavDropdown alignRight title={<User />} className="ml-auto">
-                  <Link to="/oreders" className="dropdown-item">Zamowienia</Link>
-                  <Link to="/cart" className="dropdown-item">Koszyk</Link>
-                  <Link to="/account" className="dropdown-item">Dane konta</Link>
+                  <Link to="/zpi-frontend/oreders" className="dropdown-item">Zamowienia</Link>
+                  <Link to="/zpi-frontend/cart" className="dropdown-item">Koszyk</Link>
+                  <Link to="/zpi-frontend/account" className="dropdown-item">Dane konta</Link>
                   <NavDropdown.Divider />
                   <div className="dropdown-item" onClick={this.handleLogout}>Wyloguj</div>
                 </NavDropdown>
-                : <Link to="/login">{<LogIn />}</Link>}
+                : <Link to="/zpi-frontend/login">{<LogIn />}</Link>}
             </Desktop>
 
           </Navbar>

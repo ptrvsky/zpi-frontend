@@ -9,8 +9,8 @@ import Contact from '../Contact/Contact';
 
 import './App.scss';
 
-
 function App() {
+
   return (
     <Router>
       <ScrollToTop />
@@ -18,10 +18,11 @@ function App() {
         <div className="bg">
           <div className="wrapper">
             <Navbar />
-            <Route path="/" exact component={Index} />
-            <Route path="/about" exact component={About} />
-            <Route path="/contact" exact component={Contact} />
-          
+            
+            <Route path="/zpi-frontend/" exact component={Index} />
+            <Route path="/zpi-frontend/about" exact component={About} />
+            <Route path="/zpi-frontend/contact" exact component={Contact} />
+
           </div>
         </div>
         <Footer />
