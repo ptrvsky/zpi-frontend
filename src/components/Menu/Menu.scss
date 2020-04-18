@@ -1,0 +1,41 @@
+@import '../../assets/styles/colors.scss';
+
+.menu-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 80px 15px 0px 15px;
+  text-align: center;
+  background: $light-orange;
+  
+  .menu-title {
+    font-size: 28px;
+    text-align: start;
+  }
+
+  .menu-content-wrapper {
+    width: 100%;
+    max-width: 1333px;
+  }
+
+  .menu-filters {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .menu-filters-buttons {
+      display: flex;
+    }
+
+    margin-bottom: 10px;
+
+  }
+
+  @media(max-width: 991px) {
+
+  }
+}
