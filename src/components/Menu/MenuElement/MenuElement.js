@@ -11,12 +11,12 @@ export default class MenuElement extends React.Component {
   render() {
     return (
       <div className="menu-element-wrapper">
-        <div>{this.props.details.id}</div>
-        <div>{this.props.details.typeName}</div>
-        <div>{this.props.details.crust}</div>
-        <div>{this.props.details.diameter}</div>
-        <div>{this.props.details.pizzaIngredients[0] ? this.props.details.pizzaIngredients[0].ingredient.name : null }</div>
-        <button className="menu-element-order-button" id={this.props.details.id} onClick={this.handleOrderClick}>Button zamawiający pizzę</button> 
+        <div className="id-element">{this.props.details.id}</div>
+        <div className="name-element">{this.props.details.typeName}</div>
+        <div className="crust-element">{this.props.details.crust}</div>
+        <div className="diameter-element">{this.props.details.diameter}</div>
+        <div className="ingridients-element">{this.props.details.pizzaIngredients[0] ? this.props.details.pizzaIngredients[0].ingredient.name : null}</div>
+        <div className="button-element"><button className=" menu-element-order-button" id={this.props.details.id} onClick={this.handleOrderClick}><span>Zamowic</span></button></div>
       </div>
     );
   }

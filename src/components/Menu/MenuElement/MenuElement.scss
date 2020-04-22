@@ -1,18 +1,68 @@
-@import '../../../assets/styles/colors.scss';
+@import "../../../assets/styles/colors.scss";
 
 .menu-element-wrapper {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  border: solid 1px $dark-orange;
-  background-color: $light-gray;
-  margin-bottom: 5px;
+  font-size: 23px;
+  background-color: $light-pink;
+  margin-bottom: 15px;
+  border: solid 1px $light-orange2;
 
-  .menu-element-order-button {
-    
+  .id-element {
+    width: 3%;
+    text-align: right;
+  }
+  .name-element,
+  .crust-element {
+    display: flex;
+    width: 15%;
+    text-align: left;
+  }
+  .diameter-element {
+    width: 5%;
+    text-align: right;
+  }
+  .ingridients-element {
+    width: 20%;
+    text-align: left;
   }
 
-  @media(max-width: 991px) {
+  .menu-element-order-button {
+    border-radius: 7px;
+    color: white;
+    background-color: $red;
+  }
 
+  .menu-element-order-button:hover {
+    box-shadow: 0px 0px 10px 0px rgba(133, 6, 6, 0.75);
+  }
+
+  .menu-element-order-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .menu-element-order-button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .menu-element-order-button:hover span {
+    padding-right: 25px;
+  }
+
+  .menu-element-order-button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  @media (max-width: 991px) {
   }
 }

@@ -51,7 +51,7 @@ export default class Menu extends React.Component {
       <div className="menu-wrapper">
         <div className="menu-content-wrapper">
           <div className="menu-filters">
-            <div className="menu-title">FILTERS</div>
+            <div className="menu-title">Filters</div>
             <div className="menu-filters-buttons">
               {this.state.ingredients ?
                 this.state.ingredients.map(ingredient =>
@@ -60,7 +60,7 @@ export default class Menu extends React.Component {
             </div>
           </div>
           <div className="menu-content">
-            <div className="menu-title">MENU</div>
+            <div className="menu-title">Menu</div>
             {this.state.pizzas ?
               this.state.pizzas.map(pizza => <MenuElement details={pizza} key={pizza.id} />) :
               null}
