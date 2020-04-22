@@ -8,54 +8,8 @@ export default class Menu extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      pizzas: [
-        {
-          "id": 1,
-          "typeName": "Test",
-          "ingredients": [
-            {
-              "id": 2,
-              "name": "Cheese",
-              "price": 4.5,
-              "ifAllergen": true,
-              "quantity": 1
-            }
-          ],
-          "diameter": 30,
-          "crust": "THICK"
-        },
-        {
-          "id": 3,
-          "typeName": "Test1",
-          "ingredients": [
-            {
-              "id": 4,
-              "name": "Ham",
-              "price": 4.5,
-              "ifAllergen": false,
-              "quantity": 1
-            }
-          ],
-          "diameter": 45,
-          "crust": "THICK"
-        }
-      ],
-      ingredients: [
-        {
-          "id": 2,
-          "name": "Cheese",
-          "price": 4.5,
-          "ifAllergen": true,
-          "quantity": 1
-        },
-        {
-          "id": 4,
-          "name": "Ham",
-          "price": 4.5,
-          "ifAllergen": false,
-          "quantity": 1
-        }
-      ],
+      pizzas: [],
+      ingredients: [],
     }
   }
 
@@ -74,7 +28,7 @@ export default class Menu extends React.Component {
   }
 
   fetchIngredients() {
-    let url = 'https://pizzeria-backend-zpi.herokuapp.com/v1/ingridient';
+    let url = 'https://pizzeria-backend-zpi.herokuapp.com/v1/ingredient';
 
     fetch(url)
       .then(response => response.json())
@@ -101,7 +55,7 @@ export default class Menu extends React.Component {
             <div className="menu-filters-buttons">
               {this.state.ingredients ?
                 this.state.ingredients.map(ingredient =>
-                  <label className="btn-filter" id={ingredient.id}>{ingredient.name}</label>) :
+                  <label className="btn-filter" id={ingredient.id} key={ingredient.id}>{ingredient.name}</label>) :
                 null}
             </div>
           </div>

@@ -15,7 +15,7 @@ export default class MenuElement extends React.Component {
         <div>{this.props.details.typeName}</div>
         <div>{this.props.details.crust}</div>
         <div>{this.props.details.diameter}</div>
-        <div>{this.props.details.ingredients[0].name}</div>
+        <div>{this.props.details.pizzaIngredients[0] ? this.props.details.pizzaIngredients[0].ingredient.name : null }</div>
         <button className="menu-element-order-button" id={this.props.details.id} onClick={this.handleOrderClick}>Button zamawiający pizzę</button> 
       </div>
     );
