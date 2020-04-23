@@ -1,0 +1,78 @@
+@import "../../../assets/styles/colors.scss";
+
+.menu-element-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 23px;
+  background-color: $light-pink;
+  margin-bottom: 15px;
+  border: solid 1px $light-orange2;
+  align-items: center;
+
+  .id-element {
+    width: 3%;
+    text-align: right;
+  }
+  .name-element {
+    display: flex;
+    width: 20%;
+    text-align: left;
+  }
+  .crust-element {
+    display: flex;
+    width: 7%;
+    text-align: left;
+  }
+  .diameter-element {
+    width: 10%;
+    text-align: right;
+  }
+  .ingridients-element {
+    width: 30%;
+    text-align: left;
+  }
+
+  .button-element {
+    padding: 3px;
+    padding-right: 15px;
+  }
+
+  .menu-element-order-button {
+    border-radius: 7px;
+    color: white;
+    background-color: $red;
+  }
+
+  .menu-element-order-button:hover {
+    box-shadow: 0px 0px 10px 0px rgba(133, 6, 6, 0.75);
+  }
+
+  .menu-element-order-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .menu-element-order-button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .menu-element-order-button:hover span {
+    padding-right: 25px;
+  }
+
+  .menu-element-order-button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  @media (max-width: 991px) {
+  }
+}

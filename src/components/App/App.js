@@ -4,6 +4,7 @@ import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import Index from '../Index/Index';
+import Menu from '../Menu/Menu';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 
@@ -20,6 +21,7 @@ function App() {
             <Navbar />
             
             <Route path="/zpi-frontend/" exact component={Index} />
+            <Route path="/zpi-frontend/menu" exact component={Menu} />
             <Route path="/zpi-frontend/about" exact component={About} />
             <Route path="/zpi-frontend/contact" exact component={Contact} />
 

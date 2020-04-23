@@ -1,0 +1,50 @@
+@import "../../assets/styles/colors.scss";
+
+.menu-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 80px 15px 0px 15px;
+  text-align: center;
+  background: $light-orange;
+
+  .menu-title {
+    font-size: 32px;
+    // text-align: start;
+    text-align: center;
+  }
+
+  .menu-content-wrapper {
+    width: 100%;
+    max-width: 1333px;
+  }
+
+  .menu-filters {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .menu-filters-buttons {
+      display: flex;
+
+      .btn-filter {
+        font-size: 17px;
+        background-color: $light-pink;
+        border: solid 2px $light-orange2;
+      }
+      .btn-filter:hover{
+          box-shadow: 0px 0px 10px 0px rgba(165, 76, 17, 0.75);
+        }
+      }
+    }
+
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 991px) {
+  }
+

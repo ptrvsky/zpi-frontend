@@ -9,8 +9,8 @@ export default class Index extends React.Component {
     return (
       <div className="index-wrapper">
         <div className="content">
-          <div className="p1">Najlepsza pizza w mieście.</div>
-          <div className="p2">Na serio, nie kłamiemy.</div>
+          <div className="p1">Najlepsza pizza w mieście</div>
+          <div className="p2">Na serio, nie kłamiemy</div>
           <div className="button-wrapper">
             <Link to="/zpi-frontend/menu">
               <button className="btn-primary btn-order">Zamów teraz</button>
