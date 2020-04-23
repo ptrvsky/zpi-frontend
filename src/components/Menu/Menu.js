@@ -62,7 +62,7 @@ export default class Menu extends React.Component {
           <div className="menu-content">
             <div className="menu-title">Menu</div>
             {this.state.pizzas ?
-              this.state.pizzas.map(pizza => <MenuElement details={pizza} key={pizza.id} />) :
+              this.state.pizzas.map((pizza, index) => <MenuElement details={pizza} key={pizza.id} index={index} />) :
               null}
           </div>
         </div>
