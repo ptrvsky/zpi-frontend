@@ -24,6 +24,22 @@ class NavigationBar extends React.Component {
         status: 'NOT_LOGGED',
       },
     }
+    this.handleLogout = this.handleLogout.bind(this);
+  }
+
+  componentDidMount() {
+    if (localStorage.getItem('user')) this.setState({
+      user: JSON.parse(localStorage.getItem('user'))
+    });
+  }
+
+  handleLogout() {
+    localStorage.removeItem('user');
+    this.setState({
+      user: {
+        status: 'NOT_LOGGED'
+      }
+    })
   }
 
   render() {
@@ -38,7 +54,7 @@ class NavigationBar extends React.Component {
             </Link>
 
             <Mobile>
-            {this.state.user.status === 'LOGGED' ?
+              {this.state.user.status === 'LOGGED' ?
                 <NavDropdown alignRight title={<User />} className="user-button-mobile ml-auto">
                   <Link to="/zpi-frontend/oreders" className="dropdown-item">Zamowienia</Link>
                   <Link to="/zpi-frontend/cart" className="dropdown-item">Koszyk</Link>
@@ -60,7 +76,7 @@ class NavigationBar extends React.Component {
                 <Link to="/zpi-frontend/menu" className="nav-link">Menu</Link>
                 <Link to="/zpi-frontend/about" className="nav-link">O nas</Link>
                 <Link to="/zpi-frontend/contact" className="nav-link">Kontakt</Link>
-                </div>
+              </div>
               {this.state.user.status === 'LOGGED' ?
                 <NavDropdown alignRight title={<User />} className="ml-auto">
                   <Link to="/zpi-frontend/oreders" className="dropdown-item">Zamowienia</Link>

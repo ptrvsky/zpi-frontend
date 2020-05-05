@@ -7,6 +7,7 @@ import Index from '../Index/Index';
 import Menu from '../Menu/Menu';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
+import Login from '../Login/Login';
 
 import './App.scss';
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/zpi-frontend/menu" exact component={Menu} />
             <Route path="/zpi-frontend/about" exact component={About} />
             <Route path="/zpi-frontend/contact" exact component={Contact} />
+            <Route path="/zpi-frontend/login" component={Login} />
 
           </div>
         </div>
