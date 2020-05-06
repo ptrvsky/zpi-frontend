@@ -34,6 +34,10 @@ nav.navbar-light {
   .dropdown-item {
     cursor: pointer;
   }
+
+  .disabled {
+    color: $red2;
+  }
 }
 
 .navbar-underline {
@@ -88,7 +92,7 @@ nav.navbar-light {
 
 @media (min-width: "991px") {
 
-  .nav-link {
+  .nav-link-padding {
     padding-left: 70px;
     padding-right: 70px;
   }

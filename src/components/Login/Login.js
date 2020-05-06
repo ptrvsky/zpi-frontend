@@ -44,7 +44,12 @@ export default class Login extends React.Component {
         if (res.status === 201) {
           document.getElementById("registration-form").reset();
           this.props.history.push('/login?registrationRedirect=true');  // Redirect to login page after succesful user registration
+          this.setState({
+            loginError: null,
+            registerError: null
+          })
         } else {
+          this.props.history.push('/login');
           res.json().then(error => this.setState({ 
             loginError: null,
             registerError: error.message 
@@ -79,6 +84,7 @@ export default class Login extends React.Component {
             .then(() => localStorage.setItem('user', JSON.stringify(user)))
             .then(() => window.location.reload(true));
         } else {
+          this.props.history.push('/login');
           res.json().then(error => this.setState({ 
             loginError: error.message,
             registerError: null

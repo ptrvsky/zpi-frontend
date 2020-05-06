@@ -56,10 +56,11 @@ class NavigationBar extends React.Component {
             <Mobile>
               {this.state.user.status === 'LOGGED' ?
                 <NavDropdown alignRight title={<User />} className="user-button-mobile ml-auto">
-                  <Link to="/orders" className="dropdown-item">Zamowienia</Link>
+                  <div className="dropdown-item disabled">{this.state.user.mail}</div>
+                  <NavDropdown.Divider />
+                  <Link to="/oreders" className="dropdown-item">Zamowienia</Link>
                   <Link to="/cart" className="dropdown-item">Koszyk</Link>
                   <Link to="/account" className="dropdown-item">Dane konta</Link>
-                  <NavDropdown.Divider />
                   <div className="dropdown-item" onClick={this.handleLogout}>Wyloguj</div>
                 </NavDropdown>
                 : <Link to="/login" className="login-button-mobile ml-auto" >{<LogIn />}</Link>}
@@ -73,16 +74,17 @@ class NavigationBar extends React.Component {
 
             <Desktop>
               <div className="desktop-links">
-                <Link to="/menu" className="nav-link">Menu</Link>
-                <Link to="/about" className="nav-link">O nas</Link>
-                <Link to="/contact" className="nav-link">Kontakt</Link>
+                <Link to="/menu" className="nav-link-padding">Menu</Link>
+                <Link to="/about" className="nav-link-padding">O nas</Link>
+                <Link to="/contact" className="nav-link-padding">Kontakt</Link>
               </div>
               {this.state.user.status === 'LOGGED' ?
                 <NavDropdown alignRight title={<User />} className="ml-auto">
+                  <div className="dropdown-item disabled">{this.state.user.mail}</div>
+                  <NavDropdown.Divider />
                   <Link to="/oreders" className="dropdown-item">Zamowienia</Link>
                   <Link to="/cart" className="dropdown-item">Koszyk</Link>
                   <Link to="/account" className="dropdown-item">Dane konta</Link>
-                  <NavDropdown.Divider />
                   <div className="dropdown-item" onClick={this.handleLogout}>Wyloguj</div>
                 </NavDropdown>
                 : <Link to="/login">{<LogIn />}</Link>}
