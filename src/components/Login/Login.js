@@ -43,7 +43,7 @@ export default class Login extends React.Component {
       .then(res => {
         if (res.status === 201) {
           document.getElementById("registration-form").reset();
-          this.props.history.push('/zpi-frontend/login?registrationRedirect=true');  // Redirect to login page after succesful user registration
+          this.props.history.push('/login?registrationRedirect=true');  // Redirect to login page after succesful user registration
         } else {
           res.json().then(error => this.setState({ 
             loginError: null,

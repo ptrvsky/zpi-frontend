@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
@@ -14,18 +14,18 @@ import './App.scss';
 function App() {
 
   return (
-    <Router>
+    <Router basename="/">
       <ScrollToTop />
       <div className="App">
         <div className="bg">
           <div className="wrapper">
             <Navbar />
             
-            <Route path="/zpi-frontend/" exact component={Index} />
-            <Route path="/zpi-frontend/menu" exact component={Menu} />
-            <Route path="/zpi-frontend/about" exact component={About} />
-            <Route path="/zpi-frontend/contact" exact component={Contact} />
-            <Route path="/zpi-frontend/login" component={Login} />
+            <Route path="/" exact component={Index} />
+            <Route path="/menu" exact component={Menu} />
+            <Route path="/about" exact component={About} />
+            <Route path="/contact" exact component={Contact} />
+            <Route path="/login" component={Login} />
 
           </div>
         </div>

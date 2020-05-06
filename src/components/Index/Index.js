@@ -12,7 +12,7 @@ export default class Index extends React.Component {
           <div className="p1">Najlepsza pizza w mieście</div>
           <div className="p2">Na serio, nie kłamiemy</div>
           <div className="button-wrapper">
-            <Link to="/zpi-frontend/menu">
+            <Link to="/menu">
               <button className="btn-primary btn-order">Zamów teraz</button>
             </Link>
           </div>
