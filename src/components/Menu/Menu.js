@@ -19,9 +19,11 @@ export default class Menu extends React.Component {
     fetch(url)
       .then(response => response.json())
       .then(pizzas => {
-        this.setState({
-          pizzas: pizzas,
-        })
+        if (pizzas.status === 200) {
+          this.setState({
+            pizzas: pizzas,
+          })
+        }
       })
       .catch(err => console.log(err));
 
@@ -33,9 +35,11 @@ export default class Menu extends React.Component {
     fetch(url)
       .then(response => response.json())
       .then(ingredients => {
-        this.setState({
-          ingredients: ingredients,
-        })
+        if (ingredients.status === 200) {
+          this.setState({
+            ingredients: ingredients,
+          })
+        }
       })
       .catch(err => console.log(err));
 
