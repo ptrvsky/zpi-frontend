@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/zpi-frontend/precache-manifest.6d2ce3842a661bd8ce0238ec7cb5038d.js"
+  "/zpi-frontend/precache-manifest.8efd3332e5c5e058ba8a43ef3071beb4.js"
 );
 
 self.addEventListener('message', (event) => {
