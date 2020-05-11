@@ -22,15 +22,17 @@
   .crust-element {
     display: flex;
     width: 7%;
-    text-align: left;
   }
   .diameter-element {
-    width: 10%;
-    text-align: right;
+    width: 7%;
   }
+
   .ingridients-element {
-    width: 30%;
+    width: 40%;
     text-align: left;
+    font-size: 18px;
+    text-align: justify;
+    padding: 5px 0px 5px 0px;
   }
 
   .button-element {

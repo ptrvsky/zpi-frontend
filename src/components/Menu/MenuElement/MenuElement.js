@@ -13,7 +13,9 @@ export default class MenuElement extends React.Component {
       <div className="menu-element-wrapper">
         <div className="id-element">{this.props.index + 1}</div>
         <div className="name-element">{this.props.details.typeName}</div>
-        <div className="ingridients-element">{this.props.details.pizzaIngredients[0] ? this.props.details.pizzaIngredients.map(pizzaIngredient => pizzaIngredient.ingredient.name) : null}</div>
+        <div className="ingridients-element">{this.props.details.pizzaIngredients[0] ? this.props.details.pizzaIngredients.map((pizzaIngredient, index) => 
+          pizzaIngredient.ingredient.name + (index < this.props.details.pizzaIngredients.length - 1 ? ', ' : '') 
+        ) : null}</div>
         <div className="crust-element">{this.props.details.crust}</div>
         <div className="diameter-element">{this.props.details.diameter + " cm"}</div>
         <div className="button-element"><button className=" menu-element-order-button" id={this.props.details.id} onClick={this.handleOrderClick}><span>Add to cart</span></button></div>
