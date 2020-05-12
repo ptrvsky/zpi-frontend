@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/zpi-frontend/static/css/main.76401f09.chunk.css",
-    "main.js": "/zpi-frontend/static/js/main.40cb8ec0.chunk.js",
-    "main.js.map": "/zpi-frontend/static/js/main.40cb8ec0.chunk.js.map",
+    "main.js": "/zpi-frontend/static/js/main.3aa5d9d7.chunk.js",
+    "main.js.map": "/zpi-frontend/static/js/main.3aa5d9d7.chunk.js.map",
     "runtime-main.js": "/zpi-frontend/static/js/runtime-main.e93567c9.js",
     "runtime-main.js.map": "/zpi-frontend/static/js/runtime-main.e93567c9.js.map",
     "static/js/2.9e98ddb3.chunk.js": "/zpi-frontend/static/js/2.9e98ddb3.chunk.js",
     "static/js/2.9e98ddb3.chunk.js.map": "/zpi-frontend/static/js/2.9e98ddb3.chunk.js.map",
     "index.html": "/zpi-frontend/index.html",
-    "precache-manifest.b849c79866edf164dc87f3bcd3aecb18.js": "/zpi-frontend/precache-manifest.b849c79866edf164dc87f3bcd3aecb18.js",
+    "precache-manifest.4160d9d3aebd044fc89b9f67b42aca9a.js": "/zpi-frontend/precache-manifest.4160d9d3aebd044fc89b9f67b42aca9a.js",
     "service-worker.js": "/zpi-frontend/service-worker.js",
     "static/css/main.76401f09.chunk.css.map": "/zpi-frontend/static/css/main.76401f09.chunk.css.map",
     "static/js/2.9e98ddb3.chunk.js.LICENSE.txt": "/zpi-frontend/static/js/2.9e98ddb3.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e93567c9.js",
     "static/js/2.9e98ddb3.chunk.js",
     "static/css/main.76401f09.chunk.css",
-    "static/js/main.40cb8ec0.chunk.js"
+    "static/js/main.3aa5d9d7.chunk.js"
   ]
 }
