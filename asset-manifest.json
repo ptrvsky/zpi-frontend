@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/zpi-frontend/static/css/main.7ebef538.chunk.css",
+    "main.css": "/zpi-frontend/static/css/main.5249dfca.chunk.css",
     "main.js": "/zpi-frontend/static/js/main.527d3eaa.chunk.js",
     "main.js.map": "/zpi-frontend/static/js/main.527d3eaa.chunk.js.map",
     "runtime-main.js": "/zpi-frontend/static/js/runtime-main.e93567c9.js",
@@ -8,15 +8,15 @@
     "static/js/2.03cb1136.chunk.js": "/zpi-frontend/static/js/2.03cb1136.chunk.js",
     "static/js/2.03cb1136.chunk.js.map": "/zpi-frontend/static/js/2.03cb1136.chunk.js.map",
     "index.html": "/zpi-frontend/index.html",
-    "precache-manifest.7d690855d0ded0ca495d3fb3c99352bc.js": "/zpi-frontend/precache-manifest.7d690855d0ded0ca495d3fb3c99352bc.js",
+    "precache-manifest.09f88d6b4a32567749fc4c2e1a79bc53.js": "/zpi-frontend/precache-manifest.09f88d6b4a32567749fc4c2e1a79bc53.js",
     "service-worker.js": "/zpi-frontend/service-worker.js",
-    "static/css/main.7ebef538.chunk.css.map": "/zpi-frontend/static/css/main.7ebef538.chunk.css.map",
+    "static/css/main.5249dfca.chunk.css.map": "/zpi-frontend/static/css/main.5249dfca.chunk.css.map",
     "static/js/2.03cb1136.chunk.js.LICENSE.txt": "/zpi-frontend/static/js/2.03cb1136.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e93567c9.js",
     "static/js/2.03cb1136.chunk.js",
-    "static/css/main.7ebef538.chunk.css",
+    "static/css/main.5249dfca.chunk.css",
     "static/js/main.527d3eaa.chunk.js"
   ]
 }
