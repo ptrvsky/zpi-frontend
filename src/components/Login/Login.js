@@ -99,43 +99,44 @@ export default class Login extends React.Component {
         <div className="forms-position-wrapper">
 
           <div className="register-wrapper">
-            <h1>Register</h1>
-            {this.props.location.search === "?registrationRedirect=true" ? <div className="success">Your account has been created. Now you can log in.</div> : null}
+            <h1>Rejestracja</h1>
+            {this.props.location.search === "?registrationRedirect=true" ? <div className="success">Twoje konto zostało utworzone. Sprawdź swój e-mail, aby potwierdzić rejestrację.</div> : null}
             {this.state.registerError ? <div className="error"> {this.state.registerError} </div> : null}
             <form onSubmit={this.handleRegisterSubmit} id="registration-form">
               <div className="form-element">
                 <label>E-mail</label>
-                <input type="email" name="email" placeholder="Enter your e-mail adress" autoComplete="new-password" />
+                <input type="email" name="email" placeholder="Podaj swój adres e-mail" autoComplete="new-password" />
               </div>
               <div className="form-element">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Enter your password" autoComplete="new-password" />
+                <label>Hasło</label>
+                <input type="password" name="password" placeholder="Podaj hasło" autoComplete="new-password" />
               </div>
               <div className="form-element">
-                <label>Confirm password</label>
-                <input type="password" name="password2" placeholder="Enter your password again" />
+                <label>Powtórz hasło</label>
+                <input type="password" name="password2" placeholder="Podaj hasło ponownie" />
               </div>
-              <button type="submit" className="btn-primary">Register</button>
+              <button type="submit" className="btn-primary">Zarejestruj</button>
             </form>
           </div>
 
           <div className="login-wrapper">
-            <h1>Log in</h1>
-            {this.props.location.search === "?logout=true" ? <div className="success">You are logged out.</div> : null}
-            {this.props.location.search === "?unauthenticatedOrderTry=true" ? <div className="error">You have to be logged in to make an order.</div> : null}
-            {this.props.location.search === "?unauthenticatedAccessTry=true" ? <div className="error">You have to be logged in to see this page.</div> : null}
+            <h1>Logowanie</h1>
+            {this.props.location.search === "?logout=true" ? <div className="success">Zostałeś wylogowany.</div> : null}
+            {this.props.location.search === "?emailConfirmation=true" ? <div className="success">Twoje konto zostało zweryfikowane. Teraz możesz się zalogować.</div> : null}
+            {this.props.location.search === "?unauthenticatedOrderTry=true" ? <div className="error">Musisz być zalogowany, aby złożyć zamówienie.</div> : null}
+            {this.props.location.search === "?unauthenticatedAccessTry=true" ? <div className="error">Musisz być zalogowany, aby uzyskać dostęp do tej strony.</div> : null}
 
             {this.state.loginError ? <div className="error"> {this.state.loginError} </div> : null}
             <form onSubmit={this.handleLoginSubmit} id="login-form">
               <div className="form-element">
                 <label>E-mail</label>
-                <input type="email" name="email" placeholder="Enter your e-mail" />
+                <input type="email" name="email" placeholder="Podaj swój adres e-mail" />
               </div>
               <div className="form-element">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Enter your password" />
+                <label>Hasło</label>
+                <input type="password" name="password" placeholder="Podaj hasło" />
               </div>
-              <button type="submit" className="btn-primary">Log in</button>
+              <button type="submit" className="btn-primary">Zaloguj</button>
             </form>
           </div>
         </div>
