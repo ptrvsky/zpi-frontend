@@ -74,7 +74,8 @@ nav.navbar-light {
   background-color: $light-gray;
 }
 
-.login-button-mobile {
+.buttons-mobile {
+  display: flex;
   padding-bottom: 6px;
   padding-right: 8px;
 }
@@ -87,7 +88,11 @@ nav.navbar-light {
   display: flex;
   width: 100%;
   justify-content: center;
-  padding-right: 200px;
+  padding-right: 80px;
+}
+
+.shopping-cart {
+  margin-right: 25px;
 }
 
 @media (min-width: "991px") {

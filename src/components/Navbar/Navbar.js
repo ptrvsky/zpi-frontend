@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { Navbar, NavDropdown } from 'react-bootstrap';
-import { User, LogIn, } from 'react-feather';
+import { User, LogIn, ShoppingCart } from 'react-feather';
 import { useMediaQuery } from 'react-responsive'
 import './Navbar.scss';
 
@@ -63,7 +63,10 @@ class NavigationBar extends React.Component {
                   <Link to="/account" className="dropdown-item">Dane konta</Link>
                   <div className="dropdown-item" onClick={this.handleLogout}>Wyloguj</div>
                 </NavDropdown>
-                : <Link to="/login" className="login-button-mobile ml-auto" >{<LogIn />}</Link>}
+                : <div className="buttons-mobile ml-auto">
+                  <div className="shopping-cart"><Link to="/cart">{<ShoppingCart />}</Link></div>
+                  <Link to="/login" >{<LogIn />}</Link>
+                </div>}
               <Navbar.Toggle />
               <Navbar.Collapse className="links">
                 <Link to="/menu" className="nav-link">Menu</Link>
@@ -78,12 +81,12 @@ class NavigationBar extends React.Component {
                 <Link to="/about" className="nav-link-padding">O nas</Link>
                 <Link to="/contact" className="nav-link-padding">Kontakt</Link>
               </div>
+              <div className="shopping-cart"><Link to="/cart">{<ShoppingCart />}</Link></div>
               {this.state.user.status === 'LOGGED' ?
                 <NavDropdown alignRight title={<User />} className="ml-auto">
                   <div className="dropdown-item disabled">{this.state.user.mail}</div>
                   <NavDropdown.Divider />
                   <Link to="/oreders" className="dropdown-item">Zamowienia</Link>
-                  <Link to="/cart" className="dropdown-item">Koszyk</Link>
                   <Link to="/account" className="dropdown-item">Dane konta</Link>
                   <div className="dropdown-item" onClick={this.handleLogout}>Wyloguj</div>
                 </NavDropdown>
