@@ -18,7 +18,8 @@
 
   .id-element {
     width: 3%;
-    text-align: right;
+    text-align: center;
+    padding-left: 15px;
   }
   .name-element {
     display: flex;
@@ -28,6 +29,8 @@
   .crust-element {
     display: flex;
     width: 7%;
+    justify-content: center;
+    text-transform: lowercase;
   }
   .diameter-element {
     width: 7%;
@@ -42,6 +45,8 @@
   }
 
   .button-element {
+    display: flex;
+    justify-content: space-evenly;
     padding: 3px;
     padding-right: 15px;
   }
@@ -79,6 +84,13 @@
   .menu-element-order-button:hover span:after {
     opacity: 1;
     right: 0;
+  }
+
+  .btn-order {
+    width: 100px;
+    padding: 5px 15px 5px 15px;
+    font-size: 16px;
+    margin: 3px 15px 3px 15px;
   }
 
   @media (max-width: 991px) {

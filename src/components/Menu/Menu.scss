@@ -20,6 +20,57 @@
   .menu-content-wrapper {
     width: 100%;
     max-width: 1333px;
+
+    .menu-title-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 23px;
+      background-color: $light-orange3;
+      margin-bottom: 15px;
+      border: solid 1px $orange;
+      align-items: center;
+
+      .id-element {
+        width: 3%;
+        text-align: center;
+        padding-left: 15px;
+      }
+      .name-element {
+        display: flex;
+        width: 20%;
+        text-align: left;
+      }
+      .crust-element {
+        display: flex;
+        width: 7%;
+        justify-content: center;
+      }
+      .diameter-element {
+        width: 7%;
+      }
+
+      .button-element {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 3px;
+        padding-right: 15px;
+      }
+
+      .button-title {
+        font-size: 23px;
+        width: 100px;
+        padding: 5px 15px 5px 15px;
+        margin: 3px 15px 3px 15px;
+      }
+
+      .ingredients-title {
+        width: 40%;
+        text-align: left;
+        padding: 5px 0px 5px 0px;
+        font-size: 23px;
+      }
+    }
   }
 
   .menu-filters {
@@ -33,7 +84,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
-      
+
       .btn-filter {
         font-size: 17px;
         background-color: $light-pink;
@@ -51,7 +102,7 @@
           &:hover {
             box-shadow: 0px 0px 10px 0px rgba(126, 126, 126, 0.75);
           }
-          
+
         }
       }
     }

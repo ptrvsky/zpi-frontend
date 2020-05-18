@@ -2,6 +2,7 @@ import React from 'react';
 import '../../assets/styles/buttons.scss';
 import MenuElement from './MenuElement/MenuElement';
 import './Menu.scss';
+import './MenuElement/MenuElement.scss';
 
 export default class Menu extends React.Component {
 
@@ -67,6 +68,14 @@ export default class Menu extends React.Component {
           </div>
           <div className="menu-content">
             <div className="menu-title">Menu</div>
+            <div className="menu-title-wrapper">
+              <div className="id-element">Lp.</div>
+              <div className="name-element">Nazwa</div>
+              <div className="ingredients-title">Składniki</div>
+              <div className="crust-element">Ciasto</div>
+              <div className="button-element"><div className="button-title">20 cm</div><div className="button-title">30 cm</div>
+              </div>
+            </div>
             {this.state.pizzas ?
               this.state.pizzas.map((pizza, index) => {
                 return pizza.pizzaIngredients.some(pizzaIngredient => this.state.filters.includes(pizzaIngredient.ingredient.id))
