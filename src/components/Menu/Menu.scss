@@ -31,21 +31,33 @@
 
     .menu-filters-buttons {
       display: flex;
-
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      
       .btn-filter {
         font-size: 17px;
         background-color: $light-pink;
         border: solid 2px $light-orange2;
-      }
-      .btn-filter:hover{
+
+        &:hover {
           box-shadow: 0px 0px 10px 0px rgba(165, 76, 17, 0.75);
+        }
+
+        &--disabled {
+          color: $gray2;
+          background-color: $light-gray;
+          border: solid 2px $light-gray2;
+
+          &:hover {
+            box-shadow: 0px 0px 10px 0px rgba(126, 126, 126, 0.75);
+          }
+          
         }
       }
     }
-
-    margin-bottom: 10px;
   }
 
-  @media (max-width: 991px) {
-  }
+  margin-bottom: 10px;
+}
 
+@media (max-width: 991px) {}

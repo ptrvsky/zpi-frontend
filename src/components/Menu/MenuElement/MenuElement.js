@@ -10,7 +10,7 @@ export default class MenuElement extends React.Component {
 
   render() {
     return (
-      <div className="menu-element-wrapper">
+      <div className={this.props.filtered ? "menu-element-wrapper menu-element-wrapper--filtered" : "menu-element-wrapper"}>
         <div className="id-element">{this.props.index + 1}</div>
         <div className="name-element">{this.props.details.typeName}</div>
         <div className="ingridients-element">{this.props.details.pizzaIngredients[0] ? this.props.details.pizzaIngredients.map((pizzaIngredient, index) => 

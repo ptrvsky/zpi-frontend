@@ -10,6 +10,12 @@
   border: solid 1px $light-orange2;
   align-items: center;
 
+  &--filtered {
+    color: $gray2;
+    background-color: $light-gray;
+    border: solid 1px $light-gray2;
+  }
+
   .id-element {
     width: 3%;
     text-align: right;

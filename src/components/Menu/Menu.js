@@ -10,7 +10,9 @@ export default class Menu extends React.Component {
     this.state = {
       pizzas: [],
       ingredients: [],
+      filters: [],
     }
+    this.handleFilterClick = this.handleFilterClick.bind(this);
   }
 
   fetchPizzas() {
@@ -18,13 +20,8 @@ export default class Menu extends React.Component {
 
     fetch(url)
       .then(response => response.json())
-      .then(pizzas => {
-          this.setState({
-            pizzas: pizzas,
-          })
-      })
+      .then(pizzas => this.setState({ pizzas }))
       .catch(err => console.log(err));
-
   }
 
   fetchIngredients() {
@@ -32,13 +29,21 @@ export default class Menu extends React.Component {
 
     fetch(url)
       .then(response => response.json())
-      .then(ingredients => {
-          this.setState({
-            ingredients: ingredients,
-          })
-      })
+      .then(ingredients => this.setState({ ingredients }))
       .catch(err => console.log(err));
+  }
 
+  handleFilterClick(event) {
+    const ingredientId = Number(event.target.id);
+    let filters = this.state.filters;
+    if (filters.includes(ingredientId)) {
+      this.setState({
+        filters: filters.filter(index => index !== ingredientId)
+      })
+    } else {
+      filters.push(ingredientId);
+      this.setState({ filters })
+    }
   }
 
   componentDidMount() {
@@ -51,18 +56,23 @@ export default class Menu extends React.Component {
       <div className="menu-wrapper">
         <div className="menu-content-wrapper">
           <div className="menu-filters">
-            <div className="menu-title">Filters</div>
+            <div className="menu-title">Filtry</div>
             <div className="menu-filters-buttons">
               {this.state.ingredients ?
                 this.state.ingredients.map(ingredient =>
-                  <label className="btn-filter" id={ingredient.id} key={ingredient.id}>{ingredient.name}</label>) :
+                  <label className={this.state.filters.includes(ingredient.id) ? "btn-filter btn-filter--disabled" : "btn-filter"}
+                    id={ingredient.id} key={ingredient.id} onClick={this.handleFilterClick}>{ingredient.name}</label>) :
                 null}
             </div>
           </div>
           <div className="menu-content">
             <div className="menu-title">Menu</div>
             {this.state.pizzas ?
-              this.state.pizzas.map((pizza, index) => <MenuElement details={pizza} key={pizza.id} index={index} />) :
+              this.state.pizzas.map((pizza, index) => {
+                return pizza.pizzaIngredients.some(pizzaIngredient => this.state.filters.includes(pizzaIngredient.ingredient.id))
+                  ? <MenuElement details={pizza} key={pizza.id} index={index} filtered={true} />
+                  : <MenuElement details={pizza} key={pizza.id} index={index} filtered={false} />
+              }) :
               null}
           </div>
         </div>
