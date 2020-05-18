@@ -1,0 +1,21 @@
+@import "../../assets/styles/colors.scss";
+
+.cart-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 80px 15px 0px 15px;
+  text-align: center;
+  background: $light-orange;
+
+  .cart-content-wrapper {
+    width: 100%;
+    max-width: 1333px;
+  }
+
+}
+
+@media (max-width: 991px) {}
