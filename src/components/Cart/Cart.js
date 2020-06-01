@@ -87,6 +87,7 @@ export default class Cart extends React.Component {
       cart: JSON.parse(localStorage.getItem('cart'))
     }
     this.handleRemoveClick = this.handleRemoveClick.bind(this);
+    this.handleOrderClick = this.handleOrderClick.bind(this);
   }
 
   handleRemoveClick(index, type) {
@@ -97,6 +98,11 @@ export default class Cart extends React.Component {
     this.setState({
       cart: JSON.parse(localStorage.getItem('cart'))
     })
+  }
+
+  handleOrderClick() {
+    localStorage.setItem('order', JSON.stringify(this.state.cart));
+    this.props.history.push('/order');
   }
 
   render() {
@@ -128,7 +134,7 @@ export default class Cart extends React.Component {
             {this.state.cart.standard.length + this.state.cart.custom.length > 0 ?
               <div>
                 <div className="align-right-wrapper"><div className="total-price">{sum.toFixed(2) + " zł"}</div></div>
-                <div className="align-right-wrapper"><button className="btn-primary btn-order">Utwórz zamówienie</button></div></div>
+                <div className="align-right-wrapper"><button className="btn-primary btn-order" onClick={this.handleOrderClick}>Utwórz zamówienie</button></div></div>
               : null}
 
 
