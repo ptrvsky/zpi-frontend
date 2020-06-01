@@ -9,16 +9,26 @@ import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Login from '../Login/Login';
 import Cart from '../Cart/Cart';
+import Order from '../Order/Order';
 
 import './App.scss';
 
 function App() {
 
-  // Set up empty cart in local storage
+  // Set up empty cart and empty order in local storage
   if (localStorage.getItem('cart') === null) {
     localStorage.setItem('cart', JSON.stringify({
       standard: [],
       custom: []
+    }));
+  }
+
+  if (localStorage.getItem('order') === null) {
+    localStorage.setItem('order', JSON.stringify({
+      standard: [],
+      custom: [],
+      address: {},
+      payment: null
     }));
   }
 
@@ -36,6 +46,7 @@ function App() {
             <Route path="/contact" exact component={Contact} />
             <Route path="/login" component={Login} />
             <Route path="/cart" component={Cart} />
+            <Route path="/order" component={Order} />
 
           </div>
         </div>
