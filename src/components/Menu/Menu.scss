@@ -21,6 +21,10 @@
     width: 100%;
     max-width: 1333px;
 
+    .add-message {
+      color: $red2;
+    }
+
     .menu-title-wrapper {
       display: flex;
       justify-content: space-between;

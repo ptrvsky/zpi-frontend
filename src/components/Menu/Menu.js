@@ -12,8 +12,10 @@ export default class Menu extends React.Component {
       pizzas: [],
       ingredients: [],
       filters: [],
+      message: null,
     }
     this.handleFilterClick = this.handleFilterClick.bind(this);
+    this.handleAddingPizzaToCart = this.handleAddingPizzaToCart.bind(this);
   }
 
   fetchPizzas() {
@@ -47,6 +49,10 @@ export default class Menu extends React.Component {
     }
   }
 
+  handleAddingPizzaToCart(name) {
+    this.setState({ message: "Dodano pizzę " + name + " do koszyka." })
+  }
+
   componentDidMount() {
     this.fetchIngredients();
     this.fetchPizzas();
@@ -56,6 +62,7 @@ export default class Menu extends React.Component {
     return (
       <div className="menu-wrapper">
         <div className="menu-content-wrapper">
+          <div className="add-message">{this.state.message ? this.state.message : null} </div>
           <div className="menu-filters">
             <div className="menu-title">Filtry</div>
             <div className="menu-filters-buttons">
@@ -79,8 +86,10 @@ export default class Menu extends React.Component {
             {this.state.pizzas ?
               this.state.pizzas.map((pizza, index) => {
                 return pizza.pizzaIngredients.some(pizzaIngredient => this.state.filters.includes(pizzaIngredient.ingredient.id))
-                  ? <MenuElement details={pizza} key={pizza.id} index={index} filtered={true} />
-                  : <MenuElement details={pizza} key={pizza.id} index={index} filtered={false} />
+                  ? <MenuElement details={pizza} key={pizza.id} index={index} filtered={true}
+                    handleAddingPizzaToCart={this.handleAddingPizzaToCart} />
+                  : <MenuElement details={pizza} key={pizza.id} index={index} filtered={false}
+                    handleAddingPizzaToCart={this.handleAddingPizzaToCart} />
               }) :
               null}
           </div>

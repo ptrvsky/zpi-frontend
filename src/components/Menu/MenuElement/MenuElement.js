@@ -16,6 +16,7 @@ export default class MenuElement extends React.Component {
     e.target.id === '20' ? pizza.diameter = 20 : pizza.diameter = 30;
     cart.standard = cart.standard.concat(pizza);
     localStorage.setItem('cart', JSON.stringify(cart));
+    this.props.handleAddingPizzaToCart(pizza.typeName + " (" + pizza.diameter + " cm)");
   }
 
   render() {
@@ -28,9 +29,9 @@ export default class MenuElement extends React.Component {
         ) : null}</div>
         <div className="crust-element">{this.props.details.crust}</div>
         <div className="button-element"><button className="btn-primary btn-order" id={'20'} onClick={this.handleOrderClick}>
-          {this.props.details.price ? this.props.details.price + " zł" : "0.00 zł"}</button>
+          {this.props.details.price ? this.props.details.price.toFixed(2) + " zł" : "0.00 zł"}</button>
           <button className="btn-primary btn-order" id={'30'} onClick={this.handleOrderClick}>
-          {this.props.details.price ? this.props.details.price + " zł" : "0.00 zł"}</button>
+          {this.props.details.price ? this.props.details.price.toFixed(2) + " zł" : "0.00 zł"}</button>
         </div>
       </div>
     );
