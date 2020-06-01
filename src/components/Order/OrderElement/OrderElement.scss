@@ -1,0 +1,67 @@
+@import "../../../assets/styles/colors.scss";
+
+.order-element-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 23px;
+  background-color: $light-pink;
+  margin-bottom: 15px;
+  border: solid 1px $light-orange2;
+  align-items: center;
+  padding: 5px 0px 5px 0px;
+
+  .id-element {
+    width: 3%;
+    text-align: right;
+
+  }
+  .name-element {
+    display: flex;
+    width: 20%;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .type-element {
+    display: flex;
+    text-align: center;
+    width: 13%;
+    text-transform: lowercase;
+  }
+
+  .price-element {
+    width: 150px;
+    text-align: right;
+    padding-right: 35px;
+  }
+
+  .ingredients-element {
+    width: 40%;
+    text-align: left;
+    font-size: 18px;
+    text-align: justify;
+    padding: 5px 0px 5px 0px;
+  }
+}
+
+@media (max-width: 991px) {
+  .order-element-wrapper {
+    font-size: 14px;
+
+    .ingredients-element {
+      font-size: 14px;
+      padding: 0px 10px 0px 10px;
+      text-align: left;
+    }
+    
+    .type-element {
+      width: 100px;
+    }
+
+    .price-element {
+      width: 80px;
+      padding-right: 10px;
+    }
+
+  }
+}
