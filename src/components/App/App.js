@@ -10,6 +10,7 @@ import Contact from '../Contact/Contact';
 import Login from '../Login/Login';
 import Cart from '../Cart/Cart';
 import Order from '../Order/Order';
+import Account from '../Account/Account';
 
 import './App.scss';
 
@@ -47,6 +48,7 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/cart" component={Cart} />
             <Route path="/order" component={Order} />
+            <Route path="/account" component={Account} />
 
           </div>
         </div>
