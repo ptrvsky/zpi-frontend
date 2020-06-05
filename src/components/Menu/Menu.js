@@ -85,7 +85,7 @@ export default class Menu extends React.Component {
             </div>
             {this.state.pizzas ?
               this.state.pizzas.map((pizza, index) => {
-                return pizza.pizzaIngredients.some(pizzaIngredient => this.state.filters.includes(pizzaIngredient.ingredient.id))
+                return pizza.pizzaIngredients.some(pizzaIngredient => this.state.filters.includes(pizzaIngredient.id))
                   ? <MenuElement details={pizza} key={pizza.id} index={index} filtered={true}
                     handleAddingPizzaToCart={this.handleAddingPizzaToCart} />
                   : <MenuElement details={pizza} key={pizza.id} index={index} filtered={false}

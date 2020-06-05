@@ -6,7 +6,7 @@ import OrderElement from './OrderElement/OrderElement';
 export default class Order extends React.Component {
 
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       order: JSON.parse(localStorage.getItem('order')),
       isOrderDone: false,
@@ -25,13 +25,14 @@ export default class Order extends React.Component {
       phone: event.target[2].value,
       email: event.target[3].value
     }
-    if (event.target[4].checked) order.payment = 'onDelivery';
-    if (event.target[5].checked) order.payment = 'online';
+    // Payment data
+    // if (event.target[4].checked) order.payment = 'onDelivery';
+    // if (event.target[5].checked) order.payment = 'online';
 
     localStorage.setItem('order', JSON.stringify(order));
 
     // Prepare order to send to backend
-    order.standard = order.standard.map(pizza => pizza = {
+    order.standards = order.standards.map(pizza => pizza = {
       id: pizza.id,
       diameter: pizza.diameter
     });
@@ -46,17 +47,17 @@ export default class Order extends React.Component {
       body: JSON.stringify(order)
     })
       .then(res => {
-        if (res.status === 201) {
+        if (res.status === 200) {
           this.setState({ order: JSON.parse(localStorage.getItem('order')), isOrderDone: true });
           window.scrollTo(0, 0);
           localStorage.setItem('cart', JSON.stringify({
-            standard: [],
-            custom: []
+            standards: [],
+            customs: []
           }));
 
           localStorage.setItem('order', JSON.stringify({
-            standard: [],
-            custom: [],
+            standards: [],
+            customs: [],
             address: {},
             payment: null
           }));
@@ -73,14 +74,14 @@ export default class Order extends React.Component {
         <div className="order-content-wrapper">
           <div className="order-content">
             <div className="order-title">
-              {this.state.order.standard.length + this.state.order.custom.length > 0
+              {this.state.order.standards.length + this.state.order.customs.length > 0
                 ? this.state.isOrderDone ? "Twoje zamówienie zostało przekazane do realizacji." : "Twoje zamówienie"
                 : "Aby utworzyć zamówienie, przejdź do koszyka."} </div>
-            {this.state.order.standard ?
-              this.state.order.standard.map((pizza, index) => {
+            {this.state.order.standards ?
+              this.state.order.standards.map((pizza, index) => {
                 sum += Number(pizza.price);
                 offset = index + 1;
-                return <OrderElement details={pizza} key={index} index={index} offset={0} type='standard' />;
+                return <OrderElement details={pizza} key={index} index={index} offset={0} type='standards' />;
               })
               : null}
             {this.state.order.customs ?
@@ -88,10 +89,10 @@ export default class Order extends React.Component {
                 pizza.price = 0;
                 pizza.pizzaIngredients.map(ingredient => pizza.price += ingredient.price);
                 sum += Number(pizza.price);
-                return <OrderElement details={pizza} key={index + offset} index={index} offset={offset} type='custom' />;
+                return <OrderElement details={pizza} key={index + offset} index={index} offset={offset} type='customs' />;
               })
               : null}
-            {this.state.order.standard.length + this.state.order.custom.length > 0 ?
+            {this.state.order.standards.length + this.state.order.customs.length > 0 ?
               <div>
                 <div className="align-right-wrapper">
                   <div className="total-price">{sum.toFixed(2) + " zł"}</div>

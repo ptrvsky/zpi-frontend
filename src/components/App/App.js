@@ -18,17 +18,17 @@ function App() {
   // Set up empty cart and empty order in local storage
   if (localStorage.getItem('cart') === null) {
     localStorage.setItem('cart', JSON.stringify({
-      standard: [],
-      custom: []
+      standars: [],
+      customs: []
     }));
   }
 
   if (localStorage.getItem('order') === null) {
     localStorage.setItem('order', JSON.stringify({
-      standard: [],
-      custom: [],
+      standards: [],
+      customs: [],
       address: {},
-      payment: null
+      // payment: null
     }));
   }
 

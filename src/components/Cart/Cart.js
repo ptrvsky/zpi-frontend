@@ -6,83 +6,7 @@ import CartElement from './CartElement/CartElement';
 export default class Cart extends React.Component {
 
   constructor(props) {
-    super();
-    // this.state = {
-    //   cart: {
-    //     standard: [
-    //       {
-    //         id: 11,
-    //         typeName: "Ekstra pizza",
-    //         diameter: 30,
-    //         crust: "THICK",
-    //         price: "19.99",
-    //         pizzaIngredients: [
-    //           {
-    //             id: 5,
-    //             quantity: 1
-    //           },
-    //           {
-    //             id: 7,
-    //             quantity: 1
-    //           }
-    //         ]
-    //       },
-    //       {
-    //         id: 13,
-    //         typeName: "Ekstra pizza",
-    //         diameter: 20,
-    //         crust: "THICK",
-    //         price: "19.99",
-    //         pizzaIngredients: [
-    //           {
-    //             id: 5,
-    //             quantity: 1,
-    //           },
-    //           {
-    //             id: 7,
-    //             quantity: 1
-    //           }
-    //         ]
-    //       }
-    //     ],
-    //     customs: [
-    //       {
-    //         typeName: "Custom",
-    //         diameter: 30,
-    //         crust: "THICK",
-    //         pizzaIngredients: [
-    //           {
-    //             id: 5,
-    //             quantity: 1,
-    //             price: 3.99,
-    //           },
-    //           {
-    //             id: 7,
-    //             quantity: 1,
-    //             price: 3.99,
-    //           }
-    //         ]
-    //       },
-    //       {
-    //         typeName: "Custom",
-    //         diameter: 20,
-    //         crust: "THICK",
-    //         pizzaIngredients: [
-    //           {
-    //             id: 5,
-    //             quantity: 1,
-    //             price: 3.99,
-    //           },
-    //           {
-    //             id: 8,
-    //             quantity: 1,
-    //             price: 3.99,
-    //           }
-    //         ]
-    //       }
-    //     ],
-    //   }
-    // }
+    super(props);
     this.state = {
       cart: JSON.parse(localStorage.getItem('cart'))
     }
@@ -92,8 +16,8 @@ export default class Cart extends React.Component {
 
   handleRemoveClick(index, type) {
     let cart = JSON.parse(localStorage.getItem('cart'));
-    if (type === 'standard') cart.standard.splice(index, 1);
-    if (type === 'custom') cart.custom.splice(index, 1);
+    if (type === 'standards') cart.standards.splice(index, 1);
+    if (type === 'customs') cart.customs.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
     this.setState({
       cart: JSON.parse(localStorage.getItem('cart'))
@@ -113,12 +37,12 @@ export default class Cart extends React.Component {
         <div className="cart-content-wrapper">
           <div className="cart-content">
             <div className="cart-title">
-            {this.state.cart.standard.length + this.state.cart.custom.length > 0 ? "Twój koszyk" : "Twój koszyk jest pusty"} </div>
-            {this.state.cart.standard ?
-              this.state.cart.standard.map((pizza, index) => {
+            {this.state.cart.standards.length + this.state.cart.customs.length > 0 ? "Twój koszyk" : "Twój koszyk jest pusty"} </div>
+            {this.state.cart.standards ?
+              this.state.cart.standards.map((pizza, index) => {
                 sum += Number(pizza.price);
                 offset = index + 1;
-                return <CartElement details={pizza} key={index} index={index} offset={0} type='standard'
+                return <CartElement details={pizza} key={index} index={index} offset={0} type='standards'
                   handleRemoveClick={this.handleRemoveClick} />;
               })
               : null}
@@ -127,17 +51,15 @@ export default class Cart extends React.Component {
                 pizza.price = 0;
                 pizza.pizzaIngredients.map(ingredient => pizza.price += ingredient.price);
                 sum += Number(pizza.price);
-                return <CartElement details={pizza} key={index + offset} index={index} offset={offset} type='custom'
+                return <CartElement details={pizza} key={index + offset} index={index} offset={offset} type='customs'
                   handleRemoveClick={this.handleRemoveClick} />;
               })
               : null}
-            {this.state.cart.standard.length + this.state.cart.custom.length > 0 ?
+            {this.state.cart.standards.length + this.state.cart.customs.length > 0 ?
               <div>
                 <div className="align-right-wrapper"><div className="total-price">{sum.toFixed(2) + " zł"}</div></div>
                 <div className="align-right-wrapper"><button className="btn-primary btn-order" onClick={this.handleOrderClick}>Utwórz zamówienie</button></div></div>
               : null}
-
-
           </div>
         </div>
       </div>
