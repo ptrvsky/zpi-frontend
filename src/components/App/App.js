@@ -15,10 +15,20 @@ import './App.scss';
 
 function App() {
 
+  // Remove old version of cart if exists
+  if (localStorage.getItem('cart') !== null) {
+    if (JSON.parse(localStorage.getItem('cart')).hasOwnProperty('standard') || JSON.parse(localStorage.getItem('cart')).hasOwnProperty('custom')) {
+      localStorage.setItem('cart', JSON.stringify({
+        standards: [],
+        customs: []
+      }));
+    }
+  }
+
   // Set up empty cart and empty order in local storage
   if (localStorage.getItem('cart') === null) {
     localStorage.setItem('cart', JSON.stringify({
-      standars: [],
+      standards: [],
       customs: []
     }));
   }
