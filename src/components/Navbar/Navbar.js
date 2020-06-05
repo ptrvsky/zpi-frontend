@@ -58,7 +58,7 @@ class NavigationBar extends React.Component {
                 <NavDropdown alignRight title={<User />} className="user-button-mobile ml-auto">
                   <div className="dropdown-item disabled">{this.state.user.mail}</div>
                   <NavDropdown.Divider />
-                  <Link to="/oreders" className="dropdown-item">Zamowienia</Link>
+                  <Link to="/orders" className="dropdown-item">Zamowienia</Link>
                   <Link to="/cart" className="dropdown-item">Koszyk</Link>
                   <Link to="/account" className="dropdown-item">Dane konta</Link>
                   <div className="dropdown-item" onClick={this.handleLogout}>Wyloguj</div>
@@ -86,7 +86,7 @@ class NavigationBar extends React.Component {
                 <NavDropdown alignRight title={<User />} className="ml-auto">
                   <div className="dropdown-item disabled">{this.state.user.mail}</div>
                   <NavDropdown.Divider />
-                  <Link to="/oreders" className="dropdown-item">Zamowienia</Link>
+                  <Link to="/orders" className="dropdown-item">Zamowienia</Link>
                   <Link to="/account" className="dropdown-item">Dane konta</Link>
                   <div className="dropdown-item" onClick={this.handleLogout}>Wyloguj</div>
                 </NavDropdown>
