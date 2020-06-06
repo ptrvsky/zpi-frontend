@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../assets/styles/buttons.scss';
 import MenuElement from './MenuElement/MenuElement';
 import './Menu.scss';
@@ -93,6 +94,10 @@ export default class Menu extends React.Component {
               }) :
               null}
           </div>
+          <div className="menu-buttons-wrapper">
+            <Link to="/creator"><button className="btn-primary btn-order" >Utwórz własną pizzę</button></Link>
+            <Link to="/cart"><button className="btn-primary btn-order" >Przejdź do koszyka</button></Link>
+            </div>
         </div>
       </div>
     );
