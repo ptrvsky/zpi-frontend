@@ -48,8 +48,6 @@ export default class Cart extends React.Component {
               : null}
             {this.state.cart.customs ?
               this.state.cart.customs.map((pizza, index) => {
-                pizza.price = 0;
-                pizza.pizzaIngredients.map(ingredient => pizza.price += ingredient.price);
                 sum += Number(pizza.price);
                 return <CartElement details={pizza} key={index + offset} index={index} offset={offset} type='customs'
                   handleRemoveClick={this.handleRemoveClick} />;

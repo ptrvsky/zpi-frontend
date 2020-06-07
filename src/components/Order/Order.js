@@ -37,6 +37,15 @@ export default class Order extends React.Component {
       diameter: pizza.diameter
     });
 
+    order.customs = order.customs.map(pizza => pizza = {
+      diameter: pizza.diameter,
+      crust: pizza.crust.toUpperCase(),
+      pizzaIngredients: pizza.pizzaIngredients.map(ingredient => ingredient = {
+        id: ingredient.id,
+        quantity: 1
+      })
+    });
+
     // Prepare headers based on user status
     const headers = { 'Content-Type': 'application/json' }
     if (JSON.parse(localStorage.getItem('user'))) headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('user')).token}`;
