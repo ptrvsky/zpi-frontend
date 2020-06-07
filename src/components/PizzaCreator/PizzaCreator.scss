@@ -1,0 +1,149 @@
+@import "../../assets/styles/colors.scss";
+
+.pizza-creator-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 95px 15px 0px 15px;
+  background: $light-orange;
+
+  .form-title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .pizza-creator-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .add-message {
+    color: $red2;
+  }
+
+  .pizza-creator-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1333px;
+
+    .left-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 52%;
+
+      .diameter-and-crust-wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+
+        .diameter-picker {
+          width: 48%;
+        }
+
+        .crust-picker {
+          width: 48%;
+        }
+
+        label {
+          margin-bottom: 2px;
+          margin-right: 10px;
+        }
+
+        input {
+          background-color: $light-gray;
+          border: 1px solid $dark-orange;
+          border-radius: 5px;
+          outline: none;
+          height: 32px;
+          padding-left: 7px;
+          margin-right: 5px;
+        }
+
+        .radio-wrapper {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .ingredients-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+
+        .btn-filter {
+          font-size: 17px;
+          color: $gray3;
+          background-color: $light-gray;
+          border: solid 2px $light-gray2;
+
+          &:hover {
+            box-shadow: 0px 0px 10px 0px rgba(126, 126, 126, 0.75);
+          }
+
+          &--picked {
+            color: $dark-gray2;
+            background-color: $light-pink;
+            border: solid 2px $light-orange2;
+
+            &:hover {
+              box-shadow: 0px 0px 10px 0px rgba(165, 76, 17, 0.75);
+            }
+
+          }
+        }
+      }
+
+      .btn-primary {
+        width: 200px;
+        margin-bottom: 15px;
+        padding: 5px;
+      }
+    }
+
+    .right-wrapper {
+      width: 35%;
+      font-size: 15px;
+
+      .summary-element {
+        margin-bottom: 10px;
+        width: 100%;
+
+        .pizza-detail {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .order-button-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+
+  margin-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+  .pizza-creator-wrapper {
+    .pizza-creator-content-wrapper {
+      flex-direction: column;
+
+      .left-wrapper {
+        width: 100%;
+      }
+
+      .right-wrapper {
+        width: 100%;
+      }
+    }
+  }
+}

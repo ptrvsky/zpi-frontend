@@ -10,7 +10,7 @@ import Contact from '../Contact/Contact';
 import Login from '../Login/Login';
 import Cart from '../Cart/Cart';
 import Order from '../Order/Order';
-
+import PizzaCreator from '../PizzaCreator/PizzaCreator';
 import './App.scss';
 
 function App() {
@@ -57,6 +57,7 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/cart" component={Cart} />
             <Route path="/order" component={Order} />
+            <Route path="/creator" component={PizzaCreator} />
 
           </div>
         </div>
