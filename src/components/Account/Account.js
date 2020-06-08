@@ -11,7 +11,7 @@ export default class Account extends React.Component {
       userData: {
         email: null,
         number: null,
-        phone: null,
+        phoneNumber: null,
         street: null,
       }
     };
@@ -54,7 +54,7 @@ export default class Account extends React.Component {
       })
     })
       .then(res => {
-        if (res.status === 201) {
+        if (res.status === 202) {
           this.setState({
             error: null,
           })
@@ -88,7 +88,7 @@ export default class Account extends React.Component {
                 </div>
                 <div className="form-element">
                   <label>Numer telefonu</label>
-                  <input type="text" name="phone" defaultValue={this.state.userData.phone ? this.state.userData.phone : null} />
+                  <input type="text" name="phone" defaultValue={this.state.userData.phoneNumber ? this.state.userData.phoneNumber : null} />
                 </div>
                 <h1><br />Dane konta</h1>
                 <div className="form-element">
