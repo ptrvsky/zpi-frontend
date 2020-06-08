@@ -12,6 +12,7 @@ import Cart from '../Cart/Cart';
 import Order from '../Order/Order';
 import PizzaCreator from '../PizzaCreator/PizzaCreator';
 import './App.scss';
+import CookView from '../CookView/CookView';
 
 function App() {
 
@@ -51,7 +52,7 @@ function App() {
             <Navbar />
 
             <Route path="/" exact component={Index} />
-            <Route path="/menu" exact component={Menu} />
+            <Route path="/menu" exact component={CookView} />
             <Route path="/about" exact component={About} />
             <Route path="/contact" exact component={Contact} />
             <Route path="/login" component={Login} />
