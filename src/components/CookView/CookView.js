@@ -23,7 +23,7 @@ export default class CookView extends React.Component {
         fetch(url)
             .then(response => response.json())
             .then(orders => {
-                if (orders.status === 200) this.setState({ orders });
+                this.setState({ orders });
             })
             .catch(err => console.log(err));
     }
@@ -34,7 +34,7 @@ export default class CookView extends React.Component {
         fetch(url)
             .then(response => response.json())
             .then(pizzas => {
-                if (pizzas.status === 200) this.setState({ pizzas });
+                this.setState({ pizzas });
             })
             .catch(err => console.log(err));
     }
