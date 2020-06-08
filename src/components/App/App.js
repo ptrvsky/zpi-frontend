@@ -11,6 +11,8 @@ import Login from '../Login/Login';
 import Cart from '../Cart/Cart';
 import Order from '../Order/Order';
 import PizzaCreator from '../PizzaCreator/PizzaCreator';
+import Account from '../Account/Account';
+
 import './App.scss';
 import CookView from '../CookView/CookView';
 
@@ -60,6 +62,7 @@ function App() {
             <Route path="/cart" component={Cart} />
             <Route path="/order" component={Order} />
             <Route path="/creator" component={PizzaCreator} />
+            <Route path="/account" component={Account} />
 
           </div>
         </div>

@@ -1,0 +1,112 @@
+@import '../../assets/styles/colors.scss';
+
+.account-subpage-wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 1300px;
+  justify-content: space-around;
+  align-items: center;
+
+  .forms-position-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 500px;
+  }
+
+  .success {
+    width: 100%;
+    color: $green;
+    background: $light-green;
+    border: 1px solid $green;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 5px 5px 5px 8px;
+    margin-bottom: 10px;
+  }
+
+  .error {
+    width: 100%;
+    color: $red4;
+    background: $light-red;
+    border: 1px solid $red4;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 5px 5px 5px 8px;
+    margin-bottom: 10px;
+  }
+
+  .form-fields-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    justify-content: space-between;
+  }
+
+  .form-element {
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 11px;
+    font-size: 15px;
+    width: 100%;
+    max-width: 700px;
+
+    label {
+      margin-bottom: 2px;
+      margin-right: 10px;
+    }
+
+    input {
+      background-color: $light-gray;
+      border: 1px solid $dark-orange;
+      border-radius: 5px;
+      outline: none;
+      height: 32px;
+      padding-left: 7px;
+      margin-right: 5px;
+    }
+
+    &--street {
+      width: 70%;
+    }
+
+    &--number {
+      width: 28%;
+    }
+  }
+
+  .btn-primary {
+    width: 100%;
+    margin-top: 30px;
+    padding: 8px;
+  }
+
+  .form-wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    padding: 20px 20px 20px 20px;
+
+  }
+}
+
+@media (max-width: "991px") {
+
+  .account-subpage-wrapper {
+    .forms-position-wrapper {
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      max-height: none;
+      margin-top: 70px;
+
+    }
+  }
+}
