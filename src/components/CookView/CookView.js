@@ -8,7 +8,7 @@ import './OrderElement/OrderElement.scss';
 export default class CookView extends React.Component {
 
     constructor(props) {
-        super();
+        super(props);
         this.state = {
             orders: [],
             pizzas: [],
@@ -22,6 +22,9 @@ export default class CookView extends React.Component {
 
         fetch(url)
             .then(response => response.json())
+            .then(orders => {
+                if (orders.status === 200) this.setState({ orders });
+            })
             .catch(err => console.log(err));
     }
 
@@ -30,32 +33,35 @@ export default class CookView extends React.Component {
 
         fetch(url)
             .then(response => response.json())
+            .then(pizzas => {
+                if (pizzas.status === 200) this.setState({ pizzas });
+            })
             .catch(err => console.log(err));
     }
 
     componentDidMount() {
         this.fetchOrders();
         this.fetchPizzas();
-      }
-    
+    }
+
 
     render() {
         return (
             <div className="menu-wrapper">
                 <div className="menu-content-wrapper">
                     <div className="menu-content">
-                        <div className="menu-title">Zamowienia pizz</div>
+                        <div className="menu-title">Zamówienia pizz</div>
                         <div className="menu-title-wrapper">
                             <div className="id-element">Lp.</div>
-                            <div className="name-element">Nr Zamowienia</div>
+                            <div className="name-element">Nr Zamówienia</div>
                             <div className="ingredients-title">Skład</div>
-                            <div className="time-element">Czas zamowienia</div>
+                            <div className="time-element">Czas zamówienia</div>
                             <div className="button-element">Status</div>
                         </div>
                     </div>
                     {this.state.orders.map((order, index) => {
-                          console.log(this.state.index);
-                        return <OrderElement details={order} key={order.id} index={index} />                       
+                        console.log(this.state.index);
+                        return <OrderElement details={order} key={order.id} index={index} />
 
                     })
                     }
