@@ -52,7 +52,8 @@ function App() {
             <Navbar />
 
             <Route path="/" exact component={Index} />
-            <Route path="/menu" exact component={CookView} />
+            <Route path="/menu" exact component={Menu} />
+            <Route path="/cook_view" exact component={CookView} />
             <Route path="/about" exact component={About} />
             <Route path="/contact" exact component={Contact} />
             <Route path="/login" component={Login} />
