@@ -18,7 +18,7 @@ export default class DeliveryView extends React.Component {
     }
 
     fetchOrders() {
-        let url = 'https://pizzeria-backend-zpi.herokuapp.com/v1/view/cook';
+        let url = 'https://pizzeria-backend-zpi.herokuapp.com/v1/view/delivery';
 
         fetch(url)
             .then(response => response.json())
