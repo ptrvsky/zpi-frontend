@@ -73,7 +73,7 @@ export default class Account extends React.Component {
         <div className="forms-position-wrapper">
 
           <div className="form-wrapper">
-            <h1>Dane adresowe</h1>
+            <h1>Dane użytkownika</h1>
 
             {this.state.error ? <div className="error"> {this.state.error} </div> : null}
             <form onSubmit={this.handleSubmit} id="account-form">
@@ -90,19 +90,10 @@ export default class Account extends React.Component {
                   <label>Numer telefonu</label>
                   <input type="text" name="phone" defaultValue={this.state.userData.phoneNumber ? this.state.userData.phoneNumber : null} />
                 </div>
-                <h1><br />Dane konta</h1>
                 <div className="form-element">
                   <label>E-mail</label>
                   <input type="email" name="email" placeholder="Podaj swój adres e-mail" autoComplete="new-password"
                     defaultValue={JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')).mail : null} />
-                </div>
-                <div className="form-element">
-                  <label>Hasło</label>
-                  <input type="password" name="password" placeholder="Podaj hasło" autoComplete="new-password" />
-                </div>
-                <div className="form-element">
-                  <label>Powtórz hasło</label>
-                  <input type="password" name="password2" placeholder="Podaj hasło ponownie" />
                 </div>
                 <button type="submit" className="btn-primary">Zatwierdź</button>
               </div>
