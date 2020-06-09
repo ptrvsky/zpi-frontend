@@ -15,6 +15,7 @@ import Account from '../Account/Account';
 import CookView from '../CookView/CookView';
 import DeliveryView from '../DeliveryView/DeliveryView';
 import './App.scss';
+import OrdersView from '../OrdersView/OrdersView';
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
             <Route path="/menu" exact component={Menu} />
             <Route path="/cook_view" exact component={CookView} />
             <Route path="/delivery_view" exact component={DeliveryView} />
+            <Route path="/orders" exact component={OrdersView} />
             <Route path="/about" exact component={About} />
             <Route path="/contact" exact component={Contact} />
             <Route path="/login" component={Login} />
