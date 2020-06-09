@@ -18,18 +18,19 @@
 
   .id-element {
     width: 4%;
-    text-align: center;
-    padding-left: 15px;
+    text-align: left;
+    padding-right: 55px;
   }
   .name-element {
     display: flex;
-    width: 15%;
-    text-align: center;
+    width: 10%;
+    text-align: left;
   }
   .data-element {
     display: flex;
     width: 20%;
-    justify-content: center;
+    
+    text-align: left;
     text-transform: lowercase;
   }
 
@@ -39,7 +40,7 @@
     text-align: left;
     font-size: 18px;
     text-align: justify;
-    padding: 5px 0px 5px 0px;
+   
   }
 
   .button-element {

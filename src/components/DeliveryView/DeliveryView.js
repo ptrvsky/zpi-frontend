@@ -54,7 +54,6 @@ export default class DeliveryView extends React.Component {
                         <div className="menu-title-wrapper">
                             <div className="id-element">Lp.</div>
                             <div className="name-element">Nr Zamówienia</div>
-                            <div className="ingredients-title">Skład</div>
                             <div className="adress-element">Adres</div>
                             <div className="phoneNumber-element">Numer telefonu</div>
                             <div className="time-element">Czas zamówienia</div>
