@@ -26,8 +26,8 @@ export default class Order extends React.Component {
       email: event.target[3].value
     }
     // Payment data
-    // if (event.target[4].checked) order.payment = 'onDelivery';
-    // if (event.target[5].checked) order.payment = 'online';
+    if (event.target[4].checked) order.payment = 'onDelivery';
+    if (event.target[5].checked) order.payment = 'online';
 
     localStorage.setItem('order', JSON.stringify(order));
 
