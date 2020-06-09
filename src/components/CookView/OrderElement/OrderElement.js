@@ -11,16 +11,25 @@ export default class OrderElement extends React.Component {
     }
 
     changeStatus() {
-        fetch('/v1/order/advance', {
+        const headers = { 'Content-Type': 'application/json' }
+        if (JSON.parse(localStorage.getItem('user'))) headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('user')).token}`;
+
+        fetch('https://pizzeria-backend-zpi.herokuapp.com/v1/order/advance', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers,
             body: JSON.stringify({
                 id: this.props.details.orderId,
-                newOrderStatus: "W DRODZE"
+                newOrderStatus: "W TRAKCIE REALIZACJI"
             })
         })
+            .then(() => fetch('https://pizzeria-backend-zpi.herokuapp.com/v1/order/advance', {
+                method: 'POST',
+                headers,
+                body: JSON.stringify({
+                    id: this.props.details.orderId,
+                    newOrderStatus: "W DRODZE"
+                })
+            }))
     }
 
     render() {
