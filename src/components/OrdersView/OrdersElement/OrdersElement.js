@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../assets/styles/buttons.scss';
-import './OrderElement.scss';
+import './OrdersElement.scss';
 
 export default class OrderElement extends React.Component {
 
@@ -14,7 +14,6 @@ export default class OrderElement extends React.Component {
         return (
             <div className="menu-element-wrapper">
                 <div className="id-element">{this.props.index + 1}</div>
-                <div className="name-element">{this.props.details.orderId}</div>
                 <div className="ingridients-element"><ul>{this.props.details.orderedPizzas[0] ? this.props.details.orderedPizzas.map((pizza) =>
                     <li>{pizza.pizzaIngredients.map((pizzaIngredient, index) => pizzaIngredient.name + (index < pizza.pizzaIngredients.length - 1 ? ', ' : ''))}</li>
                 ) : null}</ul></div>

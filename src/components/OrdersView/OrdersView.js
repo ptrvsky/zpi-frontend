@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../assets/styles/buttons.scss';
-import OrderElement from './OrderElement/OrderElement';
+import OrderElement from './OrdersElement/OrdersElement';
 import './OrdersView.scss';
-import './OrderElement/OrderElement.scss';
+import './OrdersElement/OrdersElement.scss';
 
 export default class OrdersView extends React.Component {
 
@@ -39,7 +39,6 @@ export default class OrdersView extends React.Component {
                         <div className="menu-title">Zamówienia pizz</div>
                         <div className="menu-title-wrapper">
                             <div className="id-element">Lp.</div>
-                            <div className="name-element">Nr Zamówienia</div>
                             <div className="ingredients-title">Skład</div>
                             <div className="time-element">Czas zamówienia</div>
                             <div className="button-element">Status</div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../../assets/styles/buttons.scss';
 import OrderElement from './OrderElement/OrderElement';
 import './CookView.scss';

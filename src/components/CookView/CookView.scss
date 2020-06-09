@@ -13,7 +13,7 @@
 
   .menu-title {
     font-size: 32px;
-    // text-align: start;
+    text-align: start;
     text-align: center;
   }
 
@@ -32,11 +32,12 @@
       align-items: center;
 
       .id-element {
-        width: 2%;
+        width: 5%;
         text-align: center;
-        padding-left: 15px;
+        
       }
       .name-element {
+        padding-left: 40px;
         display: flex;
         width: 15%;
         text-align: left;
@@ -44,7 +45,7 @@
       .time-element {
         display: flex;
         width: 26%;
-        justify-content: center;
+        
       }
 
 
@@ -64,7 +65,7 @@
 
       .ingredients-title {
         width: 40%;
-        text-align: left;
+        text-align: center;
         padding: 5px 0px 5px 0px;
         font-size: 23px;
       }

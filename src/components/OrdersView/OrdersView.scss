@@ -44,13 +44,15 @@
       .time-element {
         display: flex;
         width: 26%;
-        justify-content: center;
+        justify-content: left;
       }
 
 
       .button-element {
+        width: 15%;
+        justify-content: left;
         display: flex;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
         padding: 3px;
         padding-right: 15px;
       }
@@ -64,7 +66,7 @@
 
       .ingredients-title {
         width: 40%;
-        text-align: left;
+        text-align: center;
         padding: 5px 0px 5px 0px;
         font-size: 23px;
       }
