@@ -16,7 +16,7 @@ export default class Login extends React.Component {
   }
 
   componentDidMount() {
-    
+
     let user = {
       status: 'NOT_LOGGED'
     }
@@ -50,9 +50,9 @@ export default class Login extends React.Component {
           })
         } else {
           this.props.history.push('/login');
-          res.json().then(error => this.setState({ 
+          res.json().then(error => this.setState({
             loginError: null,
-            registerError: error.message 
+            registerError: error.message
           }));
         }
       });
@@ -80,12 +80,15 @@ export default class Login extends React.Component {
             mail,
           }
           res.json()
-            .then(res => user.token = res.token)
+            .then(res => {
+              user.token = res.token;
+              user.role = res.roles[0];
+            })
             .then(() => localStorage.setItem('user', JSON.stringify(user)))
             .then(() => window.location.reload(true));
         } else {
           this.props.history.push('/login');
-          res.json().then(error => this.setState({ 
+          res.json().then(error => this.setState({
             loginError: error.message,
             registerError: null
           }));
