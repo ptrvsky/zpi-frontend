@@ -12,9 +12,10 @@ import Cart from '../Cart/Cart';
 import Order from '../Order/Order';
 import PizzaCreator from '../PizzaCreator/PizzaCreator';
 import Account from '../Account/Account';
-
-import './App.scss';
 import CookView from '../CookView/CookView';
+import DeliveryView from '../DeliveryView/DeliveryView';
+import './App.scss';
+
 
 function App() {
 
@@ -56,6 +57,7 @@ function App() {
             <Route path="/" exact component={Index} />
             <Route path="/menu" exact component={Menu} />
             <Route path="/cook_view" exact component={CookView} />
+            <Route path="/delivery_view" exact component={DeliveryView} />
             <Route path="/about" exact component={About} />
             <Route path="/contact" exact component={Contact} />
             <Route path="/login" component={Login} />

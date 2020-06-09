@@ -17,24 +17,22 @@
   }
 
   .id-element {
-    width: 3%;
+    width: 4%;
     text-align: center;
     padding-left: 15px;
   }
   .name-element {
     display: flex;
     width: 15%;
-    text-align: left;
+    text-align: center;
   }
   .data-element {
     display: flex;
-    width: 16%;
+    width: 20%;
     justify-content: center;
     text-transform: lowercase;
   }
-  .diameter-element {
-    width: 16%;
-  }
+
 
   .ingridients-element {
     width: 40%;

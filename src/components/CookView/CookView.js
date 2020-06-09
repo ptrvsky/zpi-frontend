@@ -60,8 +60,9 @@ export default class CookView extends React.Component {
                         </div>
                     </div>
                     {this.state.orders.map((order, index) => {
-                        console.log(this.state.index);
-                        return <OrderElement details={order} key={order.id} index={index} />
+                        
+                        return <OrderElement details={order} key={order.id} index={index}/>
+                    
 
                     })
                     }
