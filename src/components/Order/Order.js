@@ -11,8 +11,27 @@ export default class Order extends React.Component {
       order: JSON.parse(localStorage.getItem('order')),
       isOrderDone: false,
       user: JSON.parse(localStorage.getItem('user')),
+      userData: {
+        email: null,
+        number: null,
+        phoneNumber: null,
+        street: null,
+      }
     }
     this.handleOrderClick = this.handleOrderClick.bind(this);
+  }
+
+  componentDidMount() {
+    if (localStorage.getItem('user')) {
+      fetch('https://pizzeria-backend-zpi.herokuapp.com/v1/user/userAddress', {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${JSON.parse(localStorage.getItem('user')).token}`
+        }
+      })
+        .then(userData => userData.json())
+        .then(userData => this.setState({ userData }));
+    }
   }
 
   handleOrderClick(event) {
@@ -115,19 +134,22 @@ export default class Order extends React.Component {
                         ? <div className="order-detail">
                           {this.state.order.address.street + " " + this.state.order.address.number}
                         </div>
-                        : <input type="text" name="street" />}
+                        : <input type="text" name="street"
+                          defaultValue={this.state.userData.street ? this.state.userData.street : null} />}
                     </div>
                     {this.state.isOrderDone
                       ? null
                       : <div className="form-element form-element--number">
                         <label>Numer lokalu</label>
-                        <input type="text" name="number" />
+                        <input type="text" name="number"
+                          defaultValue={this.state.userData.number ? this.state.userData.number : null} />
                       </div>}
                     <div className="form-element">
                       <label>Numer telefonu</label>
                       {this.state.isOrderDone
                         ? <div className="order-detail">{this.state.order.address.phone}</div>
-                        : <input type="text" name="phone" />}
+                        : <input type="text" name="phone"
+                          defaultValue={this.state.userData.phoneNumber ? this.state.userData.phoneNumber : null} />}
                     </div>
                     <div className="form-element">
                       <label>E-mail</label>
