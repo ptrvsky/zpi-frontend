@@ -27,35 +27,23 @@ export default class CookView extends React.Component {
             .catch(err => console.log(err));
     }
 
-    fetchPizzas() {
-        let url = 'https://pizzeria-backend-zpi.herokuapp.com/v1/pizza';
-
-        fetch(url)
-            .then(response => response.json())
-            .then(pizzas => {
-                this.setState({ pizzas });
-            })
-            .catch(err => console.log(err));
-    }
-
     componentDidMount() {
         this.fetchOrders();
-        this.fetchPizzas();
     }
 
 
     render() {
         return (
-            <div className="menu-wrapper">
-                <div className="menu-content-wrapper">
-                    <div className="menu-content">
-                        <div className="menu-title">Zamówienia pizz</div>
-                        <div className="menu-title-wrapper">
-                            <div className="id-element">Lp.</div>
-                            <div className="name-element">Nr Zamówienia</div>
-                            <div className="ingredients-title">Skład</div>
-                            <div className="time-element">Czas zamówienia</div>
-                            <div className="button-element">Status</div>
+            <div className="cook-view-wrapper">
+                <div className="cook-view-content-wrapper">
+                    <div className="cook-view-content">
+                        <div className="cook-view-title">Widok kucharza</div>
+                        <div className="cook-view-title-wrapper">
+                            <div className="cook-view-id-element">Lp.</div>
+                            <div className="cook-view-name-element">Nr zamówienia</div>
+                            <div className="cook-view-ingredients-title">Skład</div>
+                            <div className="cook-view-time-element">Data zamówienia</div>
+                            <div className="cook-view-button-element">Status</div>
                         </div>
                     </div>
                     {this.state.orders.map((order, index) => {

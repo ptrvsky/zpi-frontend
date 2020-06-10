@@ -33,15 +33,16 @@ export default class OrdersView extends React.Component {
 
     render() {
         return (
-            <div className="menu-wrapper">
-                <div className="menu-content-wrapper">
-                    <div className="menu-content">
-                        <div className="menu-title">Zamówienia pizz</div>
-                        <div className="menu-title-wrapper">
-                            <div className="id-element">Lp.</div>
-                            <div className="ingredients-title">Skład</div>
-                            <div className="time-element">Czas zamówienia</div>
-                            <div className="button-element">Status</div>
+            <div className="orders-view-wrapper">
+                <div className="orders-view-content-wrapper">
+                    <div className="orders-view-content">
+                        <div className="orders-view-title">Zamówienia</div>
+                        <div className="orders-view-title-wrapper">
+                            <div className="orders-view-id-element">Lp.</div>
+                            <div className="orders-view-name-element">Nr zamówienia</div>
+                            <div className="orders-view-ingredients-title">Skład</div>
+                            <div className="orders-view-time-element">Data zamówienia</div>
+                            <div className="orders-view-button-element">Status</div>
                         </div>
                     </div>
                     {this.state.orders.map((order, index) => {

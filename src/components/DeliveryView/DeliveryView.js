@@ -27,36 +27,25 @@ export default class DeliveryView extends React.Component {
             .catch(err => console.log(err));
     }
 
-    fetchPizzas() {
-        let url = 'https://pizzeria-backend-zpi.herokuapp.com/v1/pizza';
-
-        fetch(url)
-            .then(response => response.json())
-            .then(pizzas => {
-                this.setState({ pizzas });
-            })
-            .catch(err => console.log(err));
-    }
-
     componentDidMount() {
         this.fetchOrders();
-        this.fetchPizzas();
     }
 
 
     render() {
         return (
-            <div className="menu-wrapper">
-                <div className="menu-content-wrapper">
-                    <div className="menu-content">
-                        <div className="menu-title">Zamówienia dla dostawy</div>
-                        <div className="menu-title-wrapper">
-                            <div className="id-element">Lp.</div>
-                            <div className="name-element">Nr Zamówienia</div>
-                            <div className="adress-element">Adres</div>
-                            <div className="phoneNumber-element">Numer telefonu</div>
-                            <div className="time-element">Czas zamówienia</div>
-                            <div className="button-element">Status</div>
+            <div className="delivery-view-wrapper">
+                <div className="delivery-view-content-wrapper">
+                    <div className="delivery-view-content">
+                        <div className="delivery-view-title">Widok dostawcy</div>
+                        <div className="delivery-view-title-wrapper">
+                            <div className="delivery-view-id-element">Lp.</div>
+                            <div className="delivery-view-name-element">Nr zamówienia</div>
+                            <div className="cook-view-ingredients-title">Skład</div>
+                            <div className="delivery-view-address-element">Adres</div>
+                            <div className="delivery-view-phoneNumber-element">Nr telefonu</div>
+                            <div className="delivery-view-time-element">Data zamówienia</div>
+                            <div className="delivery-view-button-element">Status</div>
                         </div>
                     </div>
                     {this.state.orders.map((order, index) => {

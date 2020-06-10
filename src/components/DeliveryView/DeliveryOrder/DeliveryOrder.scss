@@ -1,0 +1,130 @@
+@import "../../../assets/styles/colors.scss";
+
+.delivery-view-element-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 23px;
+  background-color: $light-pink;
+  margin-bottom: 15px;
+  border: solid 1px $light-orange2;
+  align-items: center;
+
+  &--filtered {
+    color: $gray2;
+    background-color: $light-gray;
+    border: solid 1px $light-gray2;
+  }
+
+  .delivery-view-element-id-element {
+    width: 3%;
+    text-align: center;
+    padding-left: 15px;
+  }
+  .delivery-view-element-name-element {
+    display: flex;
+    width: 13%;
+    justify-content: center;
+
+  }
+
+  .delivery-view-element-ingridients-element {
+    width: 20%;
+    text-align: left;
+    font-size: 14px;
+    text-align: justify;
+    padding: 5px 20px 5px 0px;
+
+    ul {
+      list-style-position: inside;
+      padding-left: 0;
+      margin: 0px;
+    }
+  }
+
+  .delivery-view-element-data-element {
+    display: flex;
+    width: 18%;
+    justify-content: center;    
+    text-transform: lowercase;
+  }
+
+
+  .delivery-view-element-address-element {
+    display: flex;
+    width: 13%;
+    font-size: 18px;
+    justify-content: left;       
+
+  }
+
+  .delivery-view-element-phoneNumber-element {
+    width: 10%;
+    text-align: left;
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .delivery-view-element-button-element {
+    display: flex;
+    width: 18%;
+    justify-content: space-evenly;
+    padding: 3px;
+    padding-right: 15px;
+  } 
+
+  .delivery-view-element-btn-status {
+    font-size: 17px;
+    background-color: $light-pink;
+    border: solid 2px $light-orange2;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 0px rgba(165, 76, 17, 0.75);
+    }
+
+    &--disabled {
+      color: $gray2;
+      background-color: $light-gray;
+      border: solid 2px $light-gray2;
+
+      &:hover {
+        box-shadow: 0px 0px 10px 0px rgba(126, 126, 126, 0.75);
+      }
+
+    }
+  }
+
+
+
+  .delivery-view-element-input-check{
+    width: 18%;
+    padding: 0px 10px 0px 10px;
+   
+    /* this is the style of an unchecked "button" */
+    .delivery-view-element-input-check{
+        display:inline-block;
+        height:20px;
+        padding:5px 8px;
+        background:green;
+        color:white
+    }
+    /* This is the style for a checked "button" */
+    .delivery-view-element-input-check.checked{
+        background:red;
+        color:black;
+        font-weight:bold
+    }
+    /* Hide the checkbox */
+    .delivery-view-element-input-check input{
+        display:none
+    }
+
+  }
+
+  @media (max-width: 991px) {
+  }
+}
+
+
+
+

@@ -1,27 +1,26 @@
 @import "../../assets/styles/colors.scss";
 
-.menu-wrapper {
+.cook-view-wrapper {
   flex: 1 1 auto;
   display: flex;
   flex-flow: column;
   align-items: center;
   width: 100%;
   min-height: 100%;
-  padding: 80px 15px 0px 15px;
+  padding: 95px 15px 0px 15px;
   text-align: center;
   background: $light-orange;
 
-  .menu-title {
+  .cook-view-title {
     font-size: 32px;
-    text-align: start;
-    text-align: center;
+    margin-bottom: 25px;
   }
 
-  .menu-content-wrapper {
+  .cook-view-content-wrapper {
     width: 100%;
     max-width: 1333px;
 
-    .menu-title-wrapper {
+    .cook-view-title-wrapper {
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -31,41 +30,41 @@
       border: solid 1px $orange;
       align-items: center;
 
-      .id-element {
-        width: 5%;
+      .cook-view-id-element {
+        width: 3%;
         text-align: center;
+        padding-left: 15px;
         
       }
-      .name-element {
-        padding-left: 40px;
+      .cook-view-name-element {
         display: flex;
-        width: 15%;
-        text-align: left;
+        width: 13%;
+        justify-content: center;
       }
-      .time-element {
+      .cook-view-time-element {
         display: flex;
-        width: 26%;
-        
+        width: 18%;
+        justify-content: center;
       }
 
 
-      .button-element {
+      .cook-view-button-element {
         display: flex;
         justify-content: space-evenly;
-        padding: 3px;
         padding-right: 15px;
+        width: 21%;
       }
 
-      .button-title {
+      .cook-view-button-title {
         font-size: 23px;
         width: 100px;
         padding: 5px 15px 5px 15px;
         margin: 3px 15px 3px 15px;
       }
 
-      .ingredients-title {
-        width: 40%;
-        text-align: center;
+      .cook-view-ingredients-title {
+        width: 37%;
+        text-align: left;
         padding: 5px 0px 5px 0px;
         font-size: 23px;
       }

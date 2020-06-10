@@ -1,6 +1,6 @@
 @import "../../../assets/styles/colors.scss";
 
-.menu-element-wrapper {
+.order-element-wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -16,41 +16,47 @@
     border: solid 1px $light-gray2;
   }
 
-  .id-element {
-    width: 4%;
-    text-align: left;
-    padding-right: 55px;
+  .order-element-id-element {
+    width: 3%;
+    text-align: center;
+    padding-left: 15px;
   }
-  .name-element {
+  .order-element-name-element {
     display: flex;
-    width: 10%;
-    text-align: left;
+    width: 13%;
+    justify-content: center;
+
   }
-  .data-element {
+  .order-element-data-element {
     display: flex;
-    width: 20%;
-    
-    text-align: left;
+    width: 18%;
+    justify-content: center;    
     text-transform: lowercase;
   }
 
 
-  .ingridients-element {
-    width: 40%;
+  .order-element-ingridients-element {
+    width: 37%;
     text-align: left;
     font-size: 18px;
     text-align: justify;
-    padding-right: 155px;
+    padding: 5px 0px 5px 0px;
+
+    ul {
+      list-style-position: inside;
+      padding-left: 0;
+      margin: 0px;
+    }
   }
 
-  .button-element {
+  .order-element-button-element {
     display: flex;
     justify-content: space-evenly;
     padding: 3px;
     padding-right: 15px;
   } 
 
-  .btn-status {
+  .order-element-btn-status {
     font-size: 17px;
     background-color: $light-pink;
     border: solid 2px $light-orange2;
@@ -73,25 +79,26 @@
 
 
 
-  .input-check{
+  .order-element-input-check{
+    width: 21%;
+    padding: 0px 10px 0px 10px;
    
     /* this is the style of an unchecked "button" */
-    .input-check{
+    .order-element-input-check{
         display:inline-block;
         height:20px;
         padding:5px 8px;
         background:green;
-        width:70px;
         color:white
     }
     /* This is the style for a checked "button" */
-    .input-check.checked{
+    .order-element-input-check.checked{
         background:red;
         color:black;
         font-weight:bold
     }
     /* Hide the checkbox */
-    .input-check input{
+    .order-element-input-check input{
         display:none
     }
 
