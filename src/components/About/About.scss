@@ -1,11 +1,14 @@
 @import "../../assets/styles/colors.scss";
+
+.about-wrapper {
+  max-width: 1333px;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.4fr 1.6fr 1fr;
   gap: 1px 1px;
   grid-template-areas: "title title photo photo" "text text photo photo" "text text photo photo";
-  padding-left: 200px;
 }
 
 .photo {

@@ -58,7 +58,7 @@ class NavigationBar extends React.Component {
                 <NavDropdown alignRight title={<User />} className="user-button-mobile ml-auto">
                   <div className="dropdown-item disabled">{this.state.user.mail}</div>
                   <NavDropdown.Divider />
-                  <Link to="/orders" className="dropdown-item">Zamowienia</Link>
+                  <Link to="/orders" className="dropdown-item">Zamówienia</Link>
                   {this.state.user.role === 'ROLE_COOK' ? <Link to="/cook_view" className="dropdown-item">Widok kucharza</Link> : null}
                   {this.state.user.role === 'ROLE_DELIVERY' ? <Link to="/delivery_view" className="dropdown-item">Widok dostawcy</Link> : null}
                   <Link to="/cart" className="dropdown-item">Koszyk</Link>
@@ -88,7 +88,7 @@ class NavigationBar extends React.Component {
                 <NavDropdown alignRight title={<User />} className="ml-auto">
                   <div className="dropdown-item disabled">{this.state.user.mail}</div>
                   <NavDropdown.Divider />
-                  <Link to="/orders" className="dropdown-item">Zamowienia</Link>
+                  <Link to="/orders" className="dropdown-item">Zamówienia</Link>
                   {this.state.user.role === 'ROLE_COOK' ? <Link to="/cook_view" className="dropdown-item">Widok kucharza</Link> : null}
                   {this.state.user.role === 'ROLE_DELIVERY' ? <Link to="/delivery_view" className="dropdown-item">Widok dostawcy</Link> : null}
                   <Link to="/account" className="dropdown-item">Dane konta</Link>
