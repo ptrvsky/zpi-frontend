@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "816406ce7b99d848dca9ed159ecf3d97",
+    "revision": "f1dae10609de506b12ec1b7eff365d9d",
     "url": "/zpi-frontend/index.html"
   },
   {
-    "revision": "3f6224f47822be4e99f3",
+    "revision": "1fca782ffb6827632579",
     "url": "/zpi-frontend/static/css/main.9e2f9d2a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zpi-frontend/static/js/2.85b438d8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3f6224f47822be4e99f3",
-    "url": "/zpi-frontend/static/js/main.ceb5eaf1.chunk.js"
+    "revision": "1fca782ffb6827632579",
+    "url": "/zpi-frontend/static/js/main.e96da3be.chunk.js"
   },
   {
     "revision": "59c9e68597c1c2c79252",
