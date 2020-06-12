@@ -33,10 +33,10 @@ export default class DeliveryOrder extends React.Component {
             <div className="delivery-view-element-wrapper">
                 <div className="delivery-view-element-id-element">{this.props.index + 1}</div>
                 <div className="delivery-view-element-name-element">{'0000' + this.props.details.orderId}</div>
-                <div className="delivery-view-element-ingridients-element"><ul>{this.props.details.pizzas[0] ? this.props.details.pizzas.map((pizza) =>
+                {/*<div className="delivery-view-element-ingridients-element"><ul>{this.props.details.pizzas[0] ? this.props.details.pizzas.map((pizza) =>
                     <li>{pizza.pizzaIngredientDto.map((pizzaIngredient, index) => pizzaIngredient.name + (index < pizza.pizzaIngredientDto.length - 1 ? ', ' : ''))}
                         {" (" + pizza.diameter + "cm, " + pizza.crust.toLowerCase() + ")"}</li>
-                ) : null}</ul></div>
+                ) : null}</ul></div>*/}
                 <div className="delivery-view-element-address-element">{this.props.details.address.street + " " + this.props.details.address.number}</div>
                 <div className="delivery-view-element-phoneNumber-element"><a href={"tel:" + this.props.details.address.phoneNumber}>{this.props.details.address.phoneNumber}</a></div>
                 <div className="delivery-view-element-data-element">{date.slice(0, 10) + ", " + date.slice(11, 16)}</div>
